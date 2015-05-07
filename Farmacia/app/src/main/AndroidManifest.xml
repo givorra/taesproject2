@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.READ_CALENDAR" />
     <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -21,6 +22,14 @@
         <activity
             android:name=".ConfiguracionActivity"
             android:label="@string/title_activity_configuracion" >
+        </activity>
+        <activity
+            android:name=".MedicoInfoActivity"
+            android:label="@string/title_activity_medico_info" >
+        </activity>
+        <activity
+            android:name=".ZonasMedicosActivity"
+            android:label="@string/title_activity_zonas_medicos" >
         </activity>
     </application>
 

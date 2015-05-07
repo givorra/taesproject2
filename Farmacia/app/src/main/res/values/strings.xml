@@ -13,5 +13,7 @@
     <string name="salir_sin_guardar">Los cambios no quedarán guardados</string>
     <string name="salir">Salir</string>
     <string name="cancelar">Cancelar</string>
+    <string name="title_activity_medico_info">MedicoInfoActivity</string>
+    <string name="title_activity_zonas_medicos">ZonasMedicosActivity</string>
 
 </resources>
