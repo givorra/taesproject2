@@ -15,5 +15,22 @@
     <string name="cancelar">Cancelar</string>
     <string name="title_activity_medico_info">MedicoInfoActivity</string>
     <string name="title_activity_zonas_medicos">ZonasMedicosActivity</string>
+    <string-array name = "nav_drawer_items">
+        <item> Seisdedos Pies Planos</item>
+        <item> Seisdedos Pies Planos</item>
+        <item> Seisdedos Pies Planos</item>
+        <item> Seisdedos Pies Planos</item>
+        <item> Seisdedos Pies Planos</item>
+        <item> Seisdedos Pies Planos</item>
+    </string-array>
+
+    <array name="nav_drawer_icons">
+        <item>@drawable/ic_servidor</item>
+        <item>@drawable/ic_servidor</item>
+        <item>@drawable/ic_servidor</item>
+        <item>@drawable/ic_servidor</item>
+        <item>@drawable/ic_servidor</item>
+        <item> Seisdedos Pies Planos</item>
+    </array>
 
 </resources>
