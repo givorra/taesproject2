@@ -38,6 +38,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        /*
         mTitle = mDrawerTitle = getTitle();
         // load slide menu items
         navMenuTitles = getResources().getStringArray(R.array.nav_drawer_items);
@@ -67,8 +68,8 @@ public class MainActivity extends Activity {
 
         // enabling action bar app icon and behaving it as toggle button
 
-        getActionBar().setDisplayHomeAsUpEnabled(true);
-        getActionBar().setHomeButtonEnabled(true);
+        //getActionBar().setDisplayHomeAsUpEnabled(true);
+        //getActionBar().setHomeButtonEnabled(true);
 
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
                 R.drawable.ic_drawer, //nav menu toggle icon
@@ -91,6 +92,9 @@ public class MainActivity extends Activity {
             // on first time display view for first nav item
             //displayView(0);}
         }
+        ^*
+
+        */
     }
 
         //Intent i = new Intent(this, ZonasMedicosActivity.class);
@@ -106,9 +110,9 @@ public class MainActivity extends Activity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // toggle nav drawer on selecting action bar app icon/title
-        if (mDrawerToggle.onOptionsItemSelected(item)) {
+        /*if (mDrawerToggle.onOptionsItemSelected(item)) {
             return true;
-        }
+        } */
         // Handle action bar actions click
         switch (item.getItemId()) {
             case R.id.action_settings:
@@ -123,6 +127,7 @@ public class MainActivity extends Activity {
      *      
      */
 
+    /*
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         // if nav drawer is opened, hide the action items
@@ -142,6 +147,7 @@ public class MainActivity extends Activity {
      *      * onPostCreate() and onConfigurationChanged()...
      *      
      */
+    /*
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
@@ -155,4 +161,5 @@ public class MainActivity extends Activity {
         // Pass any configuration change to the drawer toggls
         mDrawerToggle.onConfigurationChanged(newConfig);
     }
+    */
 }
