@@ -1,6 +1,5 @@
 package com.project2.taes.farmacia;
 
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,7 +20,6 @@ public class ZonasMedicosActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_zonas_medicos);
         SpinnerDefecto();
-        primeraVez = true;
 
     }
 
@@ -33,6 +31,7 @@ public class ZonasMedicosActivity extends Activity {
     private void SpinnerDefecto()
     {
         spZonasMedicos = (Spinner) findViewById(R.id.zonas);
+        primeraVez = true;
         // contexto, datos, apariencia
         ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.zonas, R.layout.spinner_zonas_item);
 
