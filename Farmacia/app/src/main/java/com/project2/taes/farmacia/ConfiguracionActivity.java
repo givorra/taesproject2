@@ -25,19 +25,23 @@ import java.util.TimeZone;
 public class ConfiguracionActivity extends ActionBarActivity {
 
     boolean guardado;
-    boolean usuarioCambiado;
+    boolean campoCambiado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         guardado = false;
-        usuarioCambiado = false;
+        campoCambiado = false;
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_configuracion);
-        EditText myTextBox = (EditText) findViewById(R.id.usuario);
-        myTextBox.addTextChangedListener(new TextWatcher() {
+
+        EditText usuarioText = (EditText) findViewById(R.id.usuario);
+        EditText contrasenyaText = (EditText) findViewById(R.id.contrasenya);
+        EditText servidorText = (EditText) findViewById(R.id.servidor);
+
+        TextWatcher watcher = new TextWatcher() {
             public void afterTextChanged(Editable s) {
-                usuarioCambiado = true;
+                campoCambiado = true;
             }
 
             public void beforeTextChanged(CharSequence s, int start,
@@ -47,9 +51,11 @@ public class ConfiguracionActivity extends ActionBarActivity {
             public void onTextChanged(CharSequence s, int start,
                                       int before, int count) {
             }
-        });
+        };
+        usuarioText.addTextChangedListener(watcher);
+        contrasenyaText.addTextChangedListener(watcher);
+        servidorText.addTextChangedListener(watcher);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -75,7 +81,7 @@ public class ConfiguracionActivity extends ActionBarActivity {
 
     @Override
     public void onBackPressed() {
-        if(!guardado && usuarioCambiado) {
+        if(!guardado && campoCambiado) {
             new AlertDialog.Builder(this)
                     .setMessage("Está seguro que quiere salir? Los cambios no quedarán guardados.")
                     .setCancelable(false)
