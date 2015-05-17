@@ -25,12 +25,12 @@
     </string-array>
 
     <array name="nav_drawer_icons">
-        <item>@drawable/ic_servidor</item>
-        <item>@drawable/ic_servidor</item>
-        <item>@drawable/ic_servidor</item>
-        <item>@drawable/ic_servidor</item>
-        <item>@drawable/ic_servidor</item>
-        <item>@drawable/ic_servidor</item>
+        <item>@drawable/ic_home</item>
+        <item>@drawable/ic_medico</item>
+        <item>@drawable/ic_reporte</item>
+        <item>@drawable/ic_calendario</item>
+        <item>@drawable/ic_ruta</item>
+        <item>@drawable/ic_help</item>
     </array>
 
 </resources>

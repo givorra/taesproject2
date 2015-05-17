@@ -18,10 +18,23 @@
         android:layout_height="match_parent" />
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="210dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="start"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:background="#fff">
+
+        <include layout="@layout/header"/>
+        
+        
     <!-- Listview to display slider menu -->
     <ListView
         android:id="@+id/list_slidermenu"
-        android:layout_width="240dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:choiceMode="singleChoice"
@@ -29,4 +42,5 @@
         android:dividerHeight="1dp"
         android:listSelector="@drawable/list_selector"
         android:background="#FFFFFF"/>
+    </LinearLayout>
 </android.support.v4.widget.DrawerLayout>
