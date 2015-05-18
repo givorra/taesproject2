@@ -37,14 +37,14 @@ public class Producto {
         Cantidad=cantidad;
     }
 
-    public ArrayList<Producto> getItems(){
+    public static ArrayList<Producto> getItems(){
         ArrayList<Producto> MiLista= new ArrayList<Producto>();
 
 
         //Creamos productos
         Producto producto1= new Producto();
         producto1.setTitulo("Aspirinas");
-        producto1.setObjetos("Lápiz, Bolígrafo y bloc");
+        producto1.setObjetos("Lapiz, Boligrafo y bloc");
         producto1.setCantidad("3");
 
         Producto producto2= new Producto();
@@ -57,7 +57,7 @@ public class Producto {
         producto3.setObjetos("Pelota, colchoneta y bloc");
         producto3.setCantidad("4");
 
-        //Añadimos productos
+        //Anyadimos productos
         MiLista.add(producto1);
         MiLista.add(producto2);
         MiLista.add(producto3);

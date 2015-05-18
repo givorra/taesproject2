@@ -34,5 +34,6 @@
     </array>
     <string name="title_activity_reporte">ReporteActivity</string>
     <string name="lista_vacia">No hay productos promocionados, inserte algún producto.</string>
+    <string name="title_activity_anyadir__reporte">Anyadir_Reporte</string>
 
 </resources>
