@@ -11,6 +11,7 @@ import android.net.Uri;
 import android.provider.CalendarContract;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Menu;
@@ -26,6 +27,7 @@ public class ConfiguracionActivity extends ActionBarActivity {
 
     boolean guardado;
     boolean campoCambiado;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,10 @@ public class ConfiguracionActivity extends ActionBarActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_configuracion);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
 
         EditText usuarioText = (EditText) findViewById(R.id.usuario);
         EditText contrasenyaText = (EditText) findViewById(R.id.contrasenya);

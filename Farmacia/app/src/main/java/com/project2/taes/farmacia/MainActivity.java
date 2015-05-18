@@ -14,6 +14,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
+
 import com.project2.taes.farmacia.R;
 
 import com.project2.taes.farmacia.adapters.NavDrawerListAdapter;
@@ -101,6 +103,20 @@ public class MainActivity extends ActionBarActivity {
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().add(R.id.frame_container ,reportesFragment).commit();
         }
+
+        //GUARDAR
+        //Reporte reporteNuevo = new Reporte("Matt", "Alicante");
+        //reporteNuevo.guardar(getApplicationContext());
+
+        //LEER
+        //ReportesSerializables reportes = new ReportesSerializables();
+        //reportes.leer(getApplicationContext());
+        //reportes.getReportes();
+
+        //BORRAR TODOS
+        //reportes.borrarTodo(getApplicationContext());
+
+
     }
 
     private class SlideMenuClickListener implements
@@ -132,6 +148,8 @@ public class MainActivity extends ActionBarActivity {
         // Handle action bar actions click
         switch (item.getItemId()) {
             case R.id.action_settings:
+                Intent i = new Intent(this, ConfiguracionActivity.class);
+                startActivity(i);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
