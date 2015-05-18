@@ -4,5 +4,34 @@
     <string name="app_name">Farmacia</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_configuracion">Configuración</string>
+    <string name="usuario">Usuario</string>
+    <string name="contrasenya">Contraseña</string>
+    <string name="servidor">Servidor</string>
+    <string name="configuracion">Configuración</string>
+    <string name="guardar">Guardar</string>
+    <string name="salir_sin_guardar">Los cambios no quedarán guardados</string>
+    <string name="salir">Salir</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="title_activity_medico_info">MedicoInfoActivity</string>
+    <string name="title_activity_zonas_medicos">ZonasMedicosActivity</string>
+    <string-array name = "nav_drawer_items">
+        <item> Inicio </item>
+        <item> Medicos</item>
+        <item> Reportes</item>
+        <item> Calendario</item>
+        <item> Rutas </item>
+        <item> Ayuda </item>
+    </string-array>
+
+    <array name="nav_drawer_icons">
+        <item>@drawable/ic_home</item>
+        <item>@drawable/ic_medico</item>
+        <item>@drawable/ic_reporte</item>
+        <item>@drawable/ic_calendario</item>
+        <item>@drawable/ic_ruta</item>
+        <item>@drawable/ic_help</item>
+    </array>
+    <string name="title_activity_reporte">ReporteActivity</string>
 
 </resources>

@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    tools:context=".ZonasMedicosActivity">
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/zonas"
+        android:layout_gravity="center_horizontal"
+        android:spinnerMode="dropdown"
+        android:paddingBottom="@dimen/abc_control_padding_material" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/medicos"
+        android:visibility="invisible"
+        android:drawSelectorOnTop="false"
+        android:layout_marginTop="5dp" />
+
+
+</LinearLayout>

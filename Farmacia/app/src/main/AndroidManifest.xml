@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.project2.taes.farmacia" >
 
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -15,6 +18,26 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".ConfiguracionActivity"
+            android:label="@string/title_activity_configuracion" >
+        </activity>
+        <activity
+            android:name=".MedicoInfoActivity"
+            android:label="@string/title_activity_medico_info" >
+        </activity>
+        <activity
+            android:name=".ZonasMedicosActivity"
+            android:label="@string/title_activity_zonas_medicos" >
+        </activity>
+        <activity
+            android:name=".ReporteActivity"
+            android:label="@string/title_activity_reporte"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project2.taes.farmacia.MainActivity" />
         </activity>
     </application>
 
