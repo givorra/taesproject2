@@ -33,8 +33,7 @@
         </activity>
         <activity
             android:name=".ReporteActivity"
-            android:label="@string/title_activity_reporte"
-            android:parentActivityName=".MainActivity" >
+            android:label="@string/title_activity_reporte" >
         </activity>
         <activity
             android:name=".activities.Anyadir_Reporte"
