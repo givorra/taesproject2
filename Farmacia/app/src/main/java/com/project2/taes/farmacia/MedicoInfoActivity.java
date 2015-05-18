@@ -1,13 +1,13 @@
 package com.project2.taes.farmacia;
 
 
-import android.app.Activity;
+import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class MedicoInfoActivity extends Activity {
+public class MedicoInfoActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
