@@ -1,5 +1,3 @@
-package com.project2.taes.farmacia.adapters;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,10 +10,7 @@ import com.project2.taes.farmacia.classes.Producto;
 
 import java.util.ArrayList;
 
-/**
- * Created by FranciscoJavier on 13/05/2015.
- */
-public class AdapterListaProductos extends ArrayAdapter<Producto>{
+public class AdapterListaProductos extends ArrayAdapter<Producto> {
 
     private ArrayList<Producto> items;
 
