@@ -22,6 +22,10 @@ public class AdapterReporte extends RecyclerView.Adapter<AdapterReporte.ViewHold
     private OnItemClickListener mItemClickListener;
 
     public AdapterReporte() {
+        getListaReportes();
+    }
+
+    public void getListaReportes() {
         ArrayList<String> promocionales1 = new ArrayList<String>();
         promocionales1.add("boligrafo BIC especial");
         promocionales1.add("camiseta promocional");
