@@ -2,6 +2,8 @@ package com.project2.taes.farmacia.adapters;
 
 import java.util.ArrayList;
 import java.util.Date;
+
+import android.support.v7.internal.widget.AdapterViewCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +19,7 @@ import com.project2.taes.farmacia.R;
 public class AdapterReporte extends RecyclerView.Adapter<AdapterReporte.ViewHolder> {
 
     private ArrayList<Reporte> reportes;
+    private OnItemClickListener mItemClickListener;
 
     public AdapterReporte() {
         ArrayList<String> promocionales1 = new ArrayList<String>();
@@ -119,7 +122,7 @@ public class AdapterReporte extends RecyclerView.Adapter<AdapterReporte.ViewHold
         return reportes.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         public TextView nombreMedico;
         public TextView areaVisita;
@@ -130,6 +133,23 @@ public class AdapterReporte extends RecyclerView.Adapter<AdapterReporte.ViewHold
            nombreMedico= (TextView) itemView.findViewById(R.id.txtNombreMedico);
            areaVisita= (TextView) itemView.findViewById(R.id.txtAreaVisita);
            fecha = (TextView) itemView.findViewById(R.id.txtFecha);
+            itemView.setOnClickListener(this);
         }
+
+        @Override
+        public void onClick(View v) {
+            if (mItemClickListener != null) {
+                mItemClickListener.onItemClick(v, getPosition());
+            }
+        }
+    }
+
+
+    public interface OnItemClickListener {
+        public void onItemClick(View view , int position);
+    }
+
+    public void SetOnItemClickListener(final OnItemClickListener mItemClickListener) {
+        this.mItemClickListener = mItemClickListener;
     }
 }

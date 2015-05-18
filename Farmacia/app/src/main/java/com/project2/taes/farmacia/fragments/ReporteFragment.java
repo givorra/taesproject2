@@ -1,6 +1,7 @@
 package com.project2.taes.farmacia.fragments;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -11,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.project2.taes.farmacia.R;
+import com.project2.taes.farmacia.ReporteActivity;
 import com.project2.taes.farmacia.adapters.AdapterReporte;
 
 /**
@@ -26,6 +28,7 @@ public class ReporteFragment extends Fragment {
     private AdapterReporte adapter;
     private RecyclerView listaReportes;
     private RecyclerView.LayoutManager manager;
+    private Intent intent;
 
     //private OnFragmentInteractionListener mListener;
 
@@ -52,8 +55,21 @@ public class ReporteFragment extends Fragment {
         listaReportes.setLayoutManager(manager);
         adapter=new AdapterReporte();
         listaReportes.setAdapter(adapter);
+        adapter.SetOnItemClickListener(new AdapterReporte.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(View v, int position) {
+                intent = new Intent(getActivity(), ReporteActivity.class);
+                intent.putExtra("idPosicion", position);
+                startActivity(intent);
+            }
+        });
+
+
         return v;
     }
+
+
 
 
     /**
