@@ -8,6 +8,7 @@
     <view
         android:layout_width="291dp"
         android:layout_height="425dp"
+        android:paddingTop="20dp"
         class="android.support.v7.widget.RecyclerView"
         android:id="@+id/listaReportes"
         android:layout_gravity="center" />

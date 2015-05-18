@@ -2,6 +2,7 @@ package com.project2.taes.farmacia;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -14,7 +15,8 @@ public class ReporteActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reporte);
-       id_reporte = Integer.parseInt(getIntent().getStringExtra("idPosicion"));
+        id_reporte = Integer.parseInt(getIntent().getStringExtra("idPosicion"));
+        Log.d("myTag", Integer.toString(id_reporte) + "*****************************************************************");
     }
 
     @Override

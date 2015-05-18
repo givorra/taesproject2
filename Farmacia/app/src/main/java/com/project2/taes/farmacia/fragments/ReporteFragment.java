@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,7 +29,7 @@ public class ReporteFragment extends Fragment {
     private AdapterReporte adapter;
     private RecyclerView listaReportes;
     private RecyclerView.LayoutManager manager;
-    private Intent intent;
+    //private Intent intent;
 
     //private OnFragmentInteractionListener mListener;
 
@@ -57,10 +58,14 @@ public class ReporteFragment extends Fragment {
         listaReportes.setAdapter(adapter);
         adapter.SetOnItemClickListener(new AdapterReporte.OnItemClickListener() {
 
+
             @Override
             public void onItemClick(View v, int position) {
-                intent = new Intent(getActivity(), ReporteActivity.class);
-                intent.putExtra("idPosicion", position);
+                Intent intent = new Intent(v.getContext(), ReporteActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("idPosicion", Integer.toString(position));
+                intent.putExtras(bundle);
+                //Log.d("myTag", Integer.toString(position) + "*****************************************************************");
                 startActivity(intent);
             }
         });
