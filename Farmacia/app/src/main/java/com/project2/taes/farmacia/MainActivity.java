@@ -17,6 +17,7 @@ import android.widget.ListView;
 import com.project2.taes.farmacia.R;
 
 import com.project2.taes.farmacia.adapters.NavDrawerListAdapter;
+import com.project2.taes.farmacia.fragments.ReporteFragment;
 import com.project2.taes.farmacia.slidingmenu.NavDrawerItem;
 
 import java.util.ArrayList;
@@ -37,6 +38,7 @@ public class MainActivity extends ActionBarActivity {
     private TypedArray navMenuIcons;
     private ArrayList<NavDrawerItem> navDrawerItems;
     private NavDrawerListAdapter adapter;
+    private ReporteFragment reportesFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,7 +78,7 @@ public class MainActivity extends ActionBarActivity {
         adapter = new NavDrawerListAdapter(getApplicationContext(), navDrawerItems);
         mDrawerList.setAdapter(adapter);
         mDrawerList.setOnItemClickListener(new SlideMenuClickListener());
-
+        reportesFragment = new ReporteFragment();
         // enabling action bar app icon and behaving it as toggle button
 
 
@@ -97,8 +99,7 @@ public class MainActivity extends ActionBarActivity {
         };
         mDrawerLayout.setDrawerListener(mDrawerToggle);
         if (savedInstanceState == null) {
-            // on first time display view for first nav item
-            //displayView(0);}
+            getSupportFragmentManager().beginTransaction().add(R.id.frame_container ,reportesFragment).commit();
         }
     }
 

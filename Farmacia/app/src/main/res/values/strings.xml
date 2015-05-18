@@ -32,5 +32,6 @@
         <item>@drawable/ic_ruta</item>
         <item>@drawable/ic_help</item>
     </array>
+    <string name="title_activity_reporte">ReporteActivity</string>
 
 </resources>

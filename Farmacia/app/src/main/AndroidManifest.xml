@@ -31,6 +31,14 @@
             android:name=".ZonasMedicosActivity"
             android:label="@string/title_activity_zonas_medicos" >
         </activity>
+        <activity
+            android:name=".ReporteActivity"
+            android:label="@string/title_activity_reporte"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project2.taes.farmacia.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

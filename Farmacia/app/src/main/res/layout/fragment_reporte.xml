@@ -6,8 +6,8 @@
     <!-- TODO: Update blank fragment layout -->
 
     <view
-        android:layout_width="wrap_content"
-        android:layout_height="127dp"
+        android:layout_width="291dp"
+        android:layout_height="425dp"
         class="android.support.v7.widget.RecyclerView"
         android:id="@+id/listaReportes"
         android:layout_gravity="center" />
