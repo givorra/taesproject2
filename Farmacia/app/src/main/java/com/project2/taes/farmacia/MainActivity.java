@@ -202,10 +202,10 @@ public class MainActivity extends ActionBarActivity {
                 //startActivity(i);
                 break;
             case 1:
-
+                Intent i = new Intent(this, ZonasMedicosActivity.class);
+                startActivity(i);
                 break;
             case 2:
-
                 break;
             case 3:
 

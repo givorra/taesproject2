@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:theme="@style/AppTheme"
     android:id="@+id/Tabla"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,72 +12,66 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/MedicoNombre"
+            android:id="@+id/lMedicoNombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nombre:"
-            android:textSize="15sp"
-            android:gravity="left"/>
+            android:text="Nombre:"/>
     </TableRow>
     <TableRow
         android:id="@+id/Fila2"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
 
+
         <TextView
-            android:id="@+id/MedicoNColegiado"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nº colegiado:"
-            android:gravity="left"/>
+            android:id="@+id/MedicoNombre"
+            />
     </TableRow>
+
+
     <TableRow
         android:id="@+id/Fila3"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/MedicoEspecialidad"
+            android:id="@+id/lMedicoNColegiado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Especialidad:"
-            android:gravity="left"/>
+            android:text="Nº colegiado:"/>
     </TableRow>
     <TableRow
         android:id="@+id/Fila4"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
 
+
         <TextView
-            android:id="@+id/MedicoTelefono"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tlf:"
-            android:gravity="left"/>
+            android:id="@+id/MedicoNColegiado"
+            />
     </TableRow>
+
+
     <TableRow
         android:id="@+id/Fila5"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/MedicoEmail"
+            android:id="@+id/lMedicoEspecialidad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email:"
-            android:gravity="left"/>
+            android:text="Especialidad:"/>
     </TableRow>
     <TableRow
         android:id="@+id/Fila6"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
 
+
         <TextView
-            android:id="@+id/MedicoTipo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tipo:"
-            android:gravity="left"/>
+            android:id="@+id/MedicoEspecialidad"
+            />
     </TableRow>
     <TableRow
         android:id="@+id/Fila7"
@@ -84,23 +79,20 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/MedicoHobbys"
+            android:id="@+id/lMedicoTelefono"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hobbys:"
-            android:gravity="left"/>
+            android:text="Tlf:"/>
     </TableRow>
     <TableRow
         android:id="@+id/Fila8"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
 
+
         <TextView
-            android:id="@+id/MedicoEmpresa"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Centro/s:"
-            android:gravity="left"/>
+            android:id="@+id/MedicoTelefono"
+            />
     </TableRow>
     <TableRow
         android:id="@+id/Fila9"
@@ -108,23 +100,124 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/MedicoSector"
+            android:id="@+id/lMedicoEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sector:"
-            android:gravity="left"/>
+            android:text="Email:"/>
     </TableRow>
     <TableRow
         android:id="@+id/Fila10"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
 
+
         <TextView
-            android:id="@+id/MedicoDatosInteres"
+            android:id="@+id/MedicoEmail"
+            />
+    </TableRow>
+    <TableRow
+        android:id="@+id/Fila11"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/lMedicoTipo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Datos de interés:"
-            android:gravity="left"/>
+            android:text="Tipo:"/>
     </TableRow>
+    <TableRow
+        android:id="@+id/Fila12"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
 
+
+        <TextView
+            android:id="@+id/MedicoTipo"
+            />
+    </TableRow>
+    <TableRow
+        android:id="@+id/Fila13"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/lMedicoHobbys"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hobbys:"/>
+    </TableRow>
+    <TableRow
+        android:id="@+id/Fila14"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/MedicoHobbys"
+            />
+    </TableRow>
+    <TableRow
+        android:id="@+id/Fila15"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/lMedicoEmpresa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Centro/s:"/>
+    </TableRow>
+    <TableRow
+        android:id="@+id/Fila16"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/MedicoEmpresa"
+            />
+    </TableRow>
+    <TableRow
+        android:id="@+id/Fila17"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/lMedicoSector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sector:"/>
+    </TableRow>
+    <TableRow
+        android:id="@+id/Fila18"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/MedicoSector"
+            />
+    </TableRow>
+    <TableRow
+        android:id="@+id/Fila19"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/lMedicoDatosInteres"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Datos de interés:"/>
+    </TableRow>
+    <TableRow
+        android:id="@+id/Fila20"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/MedicoDatosInteres"
+            />
+    </TableRow>
 </TableLayout>
