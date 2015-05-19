@@ -74,19 +74,19 @@
     </EditText>
 
     <TextView
-        android:id="@+id/lbDuracion"
+        android:id="@+id/lbFecha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Duración:"
+        android:text="Fecha:"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <EditText
-        android:id="@+id/txDuracion"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content" >
-
-        <requestFocus />
-    </EditText>
+        android:id="@+id/txFecha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:layout_gravity="center_horizontal" />
 
     <TextView
         android:id="@+id/lbObservaciones"
