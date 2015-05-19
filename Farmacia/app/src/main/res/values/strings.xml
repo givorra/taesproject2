@@ -29,6 +29,11 @@
         <item>@drawable/ic_help</item>
     </array>
     <string name="title_activity_reporte">ReporteActivity</string>
+<<<<<<< HEAD
     <string name="title_activity_anyadir_reporte">AnyadirReporteActivity</string>
+=======
+    <string name="lista_vacia">No hay productos promocionados, inserte algún producto.</string>
+    <string name="title_activity_anyadir__reporte">Anyadir_Reporte</string>
+>>>>>>> c6d5be660f4623f2868d3c7d706e212a02596fe6
 
 </resources>

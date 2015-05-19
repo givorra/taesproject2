@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="Nuevo Reporte"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/lbMedico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Médico:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/txMedico"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/lbAcompanyante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Acompañante?:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Spinner
+        android:id="@+id/txAcompanyante"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+    </Spinner>
+
+    <TextView
+        android:id="@+id/lbLugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lugar:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/txLugar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/lbArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Área:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/txArea"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/lbDuracion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Duración:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/txDuracion"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <requestFocus />
+    </EditText>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/lbProductosExpuestos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Productos Promocionados"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_gravity="center_horizontal" />
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/anyadir_productos_promocionales"
+        android:layout_gravity="center_horizontal" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/lbHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hora:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:layout_gravity="center_horizontal">
+
+        <requestFocus/>
+    </EditText>
+
+    <TextView
+        android:id="@+id/lbObservaciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Observaciones:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/txObservaciones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:layout_gravity="center_horizontal">
+
+        <requestFocus/>
+    </EditText>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btGuardar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guardar">
+        </Button>
+
+        <Button
+            android:id="@+id/btCancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancelar" >
+        </Button>
+
+    </LinearLayout>
+
+</LinearLayout>

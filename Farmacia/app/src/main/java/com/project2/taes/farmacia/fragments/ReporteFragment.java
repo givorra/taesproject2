@@ -54,7 +54,7 @@ public class ReporteFragment extends Fragment {
         listaReportes= (RecyclerView) v.findViewById(R.id.listaReportes);
         manager=new LinearLayoutManager(getActivity());
         listaReportes.setLayoutManager(manager);
-        adapter=new AdapterReporte();
+        adapter=new AdapterReporte(getActivity());
         listaReportes.setAdapter(adapter);
         adapter.SetOnItemClickListener(new AdapterReporte.OnItemClickListener() {
 

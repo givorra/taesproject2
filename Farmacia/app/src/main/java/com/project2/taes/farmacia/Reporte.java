@@ -10,13 +10,13 @@ import java.util.Date;
 
 public class Reporte implements java.io.Serializable {
 
-    String nombreMedico;
-    String areaVisita;
-    String lugar;
-    String acompanyante;
-    Date fecha;
-    String Observaciones;
-
+    public String nombreMedico;
+    public String areaVisita;
+    public String lugar;
+    public String acompanyante;
+    public Date fecha;
+    public String Observaciones;
+    public ArrayList<Producto> producto;
     public Reporte(String areaVisita, String nombreMedico, String lugar, String acompanyante, String observaciones, Date fecha) {
         this.areaVisita = areaVisita;
         this.nombreMedico = nombreMedico;
