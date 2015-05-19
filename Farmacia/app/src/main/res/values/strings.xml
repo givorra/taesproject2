@@ -29,5 +29,6 @@
         <item>@drawable/ic_help</item>
     </array>
     <string name="title_activity_reporte">ReporteActivity</string>
+    <string name="title_activity_anyadir_reporte">AnyadirReporteActivity</string>
 
 </resources>

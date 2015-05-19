@@ -39,6 +39,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.project2.taes.farmacia.MainActivity" />
         </activity>
+        <activity
+            android:name=".AnyadirReporteActivity"
+            android:label="@string/title_activity_anyadir_reporte"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project2.taes.farmacia.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
