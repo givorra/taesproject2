@@ -2,6 +2,7 @@ package com.project2.taes.farmacia;
 import android.content.Context;
 
 import java.io.*;
+import java.util.Date;
 
 /**
  * Created by Matt on 18/05/2015.
@@ -9,12 +10,20 @@ import java.io.*;
 
 public class Reporte implements java.io.Serializable {
 
-    String nombre;
-    String zona;
+    String nombreMedico;
+    String areaVisita;
+    String lugar;
+    String acompanyante;
+    Date fecha;
+    String Observaciones;
 
-    public Reporte(String nombre, String zona) {
-        this.nombre = nombre;
-        this.zona = zona;
+    public Reporte(String areaVisita, String nombreMedico, String lugar, String acompanyante, String observaciones, Date fecha) {
+        this.areaVisita = areaVisita;
+        this.nombreMedico = nombreMedico;
+        this.lugar = lugar;
+        this.acompanyante = acompanyante;
+        Observaciones = observaciones;
+        this.fecha = fecha;
     }
 
     public void guardar(Context context) {
