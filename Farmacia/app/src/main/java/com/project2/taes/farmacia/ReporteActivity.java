@@ -5,18 +5,38 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class ReporteActivity extends ActionBarActivity {
 
     private int id_reporte;
-
+    private ReportesSerializables reportes;
+    private Reporte reporte;
+    private android.support.v7.widget.Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reporte);
         id_reporte = Integer.parseInt(getIntent().getStringExtra("idPosicion"));
         Log.d("myTag", Integer.toString(id_reporte) + "*****************************************************************");
+        reportes = new ReportesSerializables();
+        reportes.guardarPlantilla(this);
+        reporte = reportes.getReportes().get(id_reporte);
+
+        toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
     }
 
     @Override

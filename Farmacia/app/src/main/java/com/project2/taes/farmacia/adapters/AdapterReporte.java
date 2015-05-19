@@ -28,7 +28,8 @@ public class AdapterReporte extends RecyclerView.Adapter<AdapterReporte.ViewHold
     }
 
     public void leerListaReportes() {
-        reportes.leer(context);
+        reportes = new ReportesSerializables();
+        reportes.guardarPlantilla(context);
     }
 
     @Override
@@ -50,28 +51,7 @@ public class AdapterReporte extends RecyclerView.Adapter<AdapterReporte.ViewHold
 
 
 
-    public class Producto {
-        private int codigo;
-        private String nombre;
-        private ArrayList<String> promocionales;
 
-        public Producto() {
-
-
-        }
-
-        public Producto(int cod, String nombre, ArrayList<String> promocionales) {
-            this.codigo = cod;
-            this.nombre = nombre;
-            this.promocionales = promocionales;
-        }
-
-        public void init(int cod, String nombre, ArrayList<String> promocionales) {
-            this.codigo = cod;
-            this.nombre = nombre;
-            this.promocionales = promocionales;
-        }
-    }
 
 
 
