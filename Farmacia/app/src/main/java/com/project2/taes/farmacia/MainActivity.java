@@ -64,7 +64,8 @@ public class MainActivity extends ActionBarActivity {
         getSupportActionBar().setHomeButtonEnabled(true);
 
 
-        mTitle = mDrawerTitle = getTitle();
+        mTitle = mDrawerTitle = "Reportes";
+        getSupportActionBar().setTitle(mTitle);
         // load slide menu items
         navMenuTitles = getResources().getStringArray(R.array.nav_drawer_items);
         // nav drawer icons from resources
@@ -81,6 +82,8 @@ public class MainActivity extends ActionBarActivity {
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[2], navMenuIcons.getResourceId(2, -1), true, "22"));
         // Ayuda
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[3], navMenuIcons.getResourceId(3, -1)));
+        // Configuracion
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[4], navMenuIcons.getResourceId(4, -1)));
         // Recycle the typed array
         navMenuIcons.recycle();
         // setting the nav drawer list adapter
@@ -114,6 +117,23 @@ public class MainActivity extends ActionBarActivity {
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(), AnyadirReporteActivity.class);
                 startActivity(i);
+            }
+        });
+
+        ImageButton fabButtonEnviar = (ImageButton) findViewById(R.id.fab_image_enviar);
+        fabButtonEnviar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new AlertDialog.Builder(v.getContext())
+                        .setMessage("Se enviarán los reportes pendientes.")
+                        .setCancelable(false)
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                //Borrar reportes pendientes
+                            }
+                        })
+                        .setNegativeButton("Cancelar", null)
+                        .show();
             }
         });
         if (savedInstanceState == null) {
@@ -241,6 +261,9 @@ public class MainActivity extends ActionBarActivity {
                         .setNegativeButton("Cancelar", null)
                         .show();
                 break;
+            case 4:
+                Intent intent = new Intent(this, ConfiguracionActivity.class);
+                startActivity(intent);
             default:
                 break;
         }

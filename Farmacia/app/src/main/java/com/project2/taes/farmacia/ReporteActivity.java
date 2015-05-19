@@ -19,7 +19,7 @@ public class ReporteActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reporte);
         id_reporte = Integer.parseInt(getIntent().getStringExtra("idPosicion"));
-        Log.d("myTag", Integer.toString(id_reporte) + "*****************************************************************");
+        //Log.d("myTag", Integer.toString(id_reporte) + "*****************************************************************");
         reportes = new ReportesSerializables();
         reportes.guardarPlantilla(this);
         reporte = reportes.getReportes().get(id_reporte);

@@ -45,7 +45,7 @@
         </activity>
         <activity
             android:name=".AnyadirReporteActivity"
-            android:label="@string/title_activity_anyadir_reporte"
+            android:label="@string/title_activity_anyadir__reporte"
             android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
