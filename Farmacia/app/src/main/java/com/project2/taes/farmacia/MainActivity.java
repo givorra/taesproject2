@@ -19,6 +19,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -106,6 +107,15 @@ public class MainActivity extends ActionBarActivity {
             }
         };
         mDrawerLayout.setDrawerListener(mDrawerToggle);
+
+        ImageButton fabButton = (ImageButton) findViewById(R.id.fab_image_button);
+        fabButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), AnyadirReporteActivity.class);
+                startActivity(i);
+            }
+        });
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().add(R.id.frame_container ,reportesFragment).commit();
         }
