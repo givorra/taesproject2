@@ -6,6 +6,7 @@ import android.app.DialogFragment;
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.provider.CalendarContract;
@@ -40,6 +41,13 @@ public class ConfiguracionActivity extends ActionBarActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
         EditText usuarioText = (EditText) findViewById(R.id.usuario);
         EditText contrasenyaText = (EditText) findViewById(R.id.contrasenya);
@@ -79,9 +87,10 @@ public class ConfiguracionActivity extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Intent i = new Intent(this, MainActivity.class);
+            startActivity(i);
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -102,28 +111,6 @@ public class ConfiguracionActivity extends ActionBarActivity {
             ConfiguracionActivity.this.finish();
     }
 
-    public void anyadirEventoCalendar(View view) {
-        long calID = 1;
-        long inicioMillis = 0;
-        long finalMillis = 0;
-        Calendar tiempoInicio = Calendar.getInstance();
-        tiempoInicio.set(2015, 9, 14, 7, 30);
-        inicioMillis = tiempoInicio.getTimeInMillis();
-        Calendar tiempoFinal = Calendar.getInstance();
-        tiempoFinal.set(2015, 9, 14, 8, 45);
-        finalMillis = tiempoFinal.getTimeInMillis();
-
-        ContentResolver cr = getContentResolver();
-        ContentValues values = new ContentValues();
-        values.put(CalendarContract.Events.DTSTART, inicioMillis);
-        values.put(CalendarContract.Events.DTEND, finalMillis);
-        values.put(CalendarContract.Events.TITLE, "Prueba");
-        values.put(CalendarContract.Events.DESCRIPTION, "Evento de prueba");
-        values.put(CalendarContract.Events.CALENDAR_ID, calID);
-        TimeZone timeZone = TimeZone.getDefault();
-        values.put(CalendarContract.Events.EVENT_TIMEZONE, timeZone.getID());
-        Uri uri = cr.insert(CalendarContract.Events.CONTENT_URI, values);
-    }
 
     /*
     private long consultaIdCalendario() {
@@ -142,5 +129,14 @@ public class ConfiguracionActivity extends ActionBarActivity {
 
     public void guardar(View view) {
         guardado = true;
+        new AlertDialog.Builder(this)
+                .setMessage("Guardado con éxito.")
+                .setCancelable(false)
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        ConfiguracionActivity.this.finish();
+                    }
+                })
+                .show();
     }
 }

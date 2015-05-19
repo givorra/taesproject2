@@ -1,9 +1,15 @@
 package com.project2.taes.farmacia;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.ContentResolver;
+import android.content.ContentValues;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
+import android.net.Uri;
+import android.provider.CalendarContract;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -23,6 +29,10 @@ import com.project2.taes.farmacia.fragments.ReporteFragment;
 import com.project2.taes.farmacia.slidingmenu.NavDrawerItem;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.TimeZone;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -62,18 +72,14 @@ public class MainActivity extends ActionBarActivity {
         mDrawerList = (ListView) findViewById(R.id.list_slidermenu);
         navDrawerItems = new ArrayList<NavDrawerItem>();
         // adding nav drawer items to array
-        //Inicio
-        navDrawerItems.add(new NavDrawerItem(navMenuTitles[0], navMenuIcons.getResourceId(0, -1)));
         // Medicos
-        navDrawerItems.add(new NavDrawerItem(navMenuTitles[1], navMenuIcons.getResourceId(1, -1)));
-        // Reportes
-        navDrawerItems.add(new NavDrawerItem(navMenuTitles[2], navMenuIcons.getResourceId(2, -1)));
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[0], navMenuIcons.getResourceId(0, -1)));
         // Calendario
-        navDrawerItems.add(new NavDrawerItem(navMenuTitles[3], navMenuIcons.getResourceId(3, -1), true, "22"));
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[1], navMenuIcons.getResourceId(1, -1)));
         // Rutas
-        navDrawerItems.add(new NavDrawerItem(navMenuTitles[4], navMenuIcons.getResourceId(4, -1)));
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[2], navMenuIcons.getResourceId(2, -1), true, "22"));
         // Ayuda
-        navDrawerItems.add(new NavDrawerItem(navMenuTitles[5], navMenuIcons.getResourceId(5, -1), true, "50+"));
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[3], navMenuIcons.getResourceId(3, -1)));
         // Recycle the typed array
         navMenuIcons.recycle();
         // setting the nav drawer list adapter
@@ -198,29 +204,92 @@ public class MainActivity extends ActionBarActivity {
     private void displayView(int position) {
         switch (position) {
             case 0:
-                //Intent i = new Intent(this, ConfiguracionActivity.class);
-                //startActivity(i);
+                Intent i = new Intent(this, ZonasMedicosActivity.class);
+                startActivity(i);
                 break;
             case 1:
-
+                new AlertDialog.Builder(this)
+                        .setMessage("Se abrirá el calendario de este mes.")
+                        .setCancelable(false)
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                mostrarCalendario(0);
+                            }
+                        })
+                        .setNegativeButton("Cancelar", null)
+                        .show();
                 break;
             case 2:
-
+                new AlertDialog.Builder(this)
+                        .setMessage("Tiene 22 rutas nuevas para importar al calendario.")
+                        .setCancelable(false)
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                mostrarCalendarioRutasNuevas();
+                            }
+                        })
+                        .setNegativeButton("Cancelar", null)
+                        .show();
                 break;
-            case 3:
-
-                break;
-            case 4:
-
-                break;
-            case 5:
-
-                break;
-
             default:
                 break;
         }
 
     }
+
+    private void mostrarCalendarioRutasNuevas() {
+        new AlertDialog.Builder(this)
+                .setMessage("Quiere ver el calendario ahora?")
+                .setCancelable(false)
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        /*Intent i = new Intent(Intent.ACTION_VIEW);
+                        i.setData(Uri.parse("content://com.android.calendar/time"));
+                        startActivity(i);*/
+                        anyadirEventoCalendar();
+                        mostrarCalendario(1);
+                    }
+                })
+                .setNegativeButton("Mas tarde", null)
+                .show();
+    }
+
+    public void anyadirEventoCalendar() {
+        long calID = 1;
+        long inicioMillis = 0;
+        long finalMillis = 0;
+        Calendar tiempoInicio = Calendar.getInstance();
+        tiempoInicio.set(2015, 5, 2, 7, 30);
+        inicioMillis = tiempoInicio.getTimeInMillis();
+        Calendar tiempoFinal = Calendar.getInstance();
+        tiempoFinal.set(2015, 5, 2, 8, 45);
+        finalMillis = tiempoFinal.getTimeInMillis();
+
+        ContentResolver cr = getContentResolver();
+        ContentValues values = new ContentValues();
+        values.put(CalendarContract.Events.DTSTART, inicioMillis);
+        values.put(CalendarContract.Events.DTEND, finalMillis);
+        values.put(CalendarContract.Events.TITLE, "Prueba");
+        values.put(CalendarContract.Events.DESCRIPTION, "Evento de prueba");
+        values.put(CalendarContract.Events.CALENDAR_ID, calID);
+        TimeZone timeZone = TimeZone.getDefault();
+        values.put(CalendarContract.Events.EVENT_TIMEZONE, timeZone.getID());
+        Uri uri = cr.insert(CalendarContract.Events.CONTENT_URI, values);
+    }
+
+    private void mostrarCalendario(int mes) {
+        Calendar cal = new GregorianCalendar();
+        cal.setTime(new Date());
+        cal.add(Calendar.MONTH, mes);
+        long time = cal.getTime().getTime();
+        Uri.Builder builder =
+                CalendarContract.CONTENT_URI.buildUpon();
+        builder.appendPath("time");
+        builder.appendPath(Long.toString(time));
+        Intent intent =
+                new Intent(Intent.ACTION_VIEW, builder.build());
+        startActivity(intent);
+    }
+
 }
 

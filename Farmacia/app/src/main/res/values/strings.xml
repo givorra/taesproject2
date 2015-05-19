@@ -16,18 +16,14 @@
     <string name="title_activity_medico_info">MedicoInfoActivity</string>
     <string name="title_activity_zonas_medicos">ZonasMedicosActivity</string>
     <string-array name = "nav_drawer_items">
-        <item> Inicio </item>
         <item> Medicos</item>
-        <item> Reportes</item>
         <item> Calendario</item>
-        <item> Rutas </item>
+        <item> Nuevas Rutas </item>
         <item> Ayuda </item>
     </string-array>
 
     <array name="nav_drawer_icons">
-        <item>@drawable/ic_home</item>
         <item>@drawable/ic_medico</item>
-        <item>@drawable/ic_reporte</item>
         <item>@drawable/ic_calendario</item>
         <item>@drawable/ic_ruta</item>
         <item>@drawable/ic_help</item>

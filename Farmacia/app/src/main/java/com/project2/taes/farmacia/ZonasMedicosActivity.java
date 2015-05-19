@@ -3,6 +3,8 @@ package com.project2.taes.farmacia;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -13,12 +15,24 @@ import android.widget.Spinner;
 import android.widget.AdapterView.OnItemSelectedListener;
 
 
-public class ZonasMedicosActivity extends Activity {
+public class ZonasMedicosActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_zonas_medicos);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
         SpinnerDefecto();
 
     }
@@ -107,6 +121,8 @@ public class ZonasMedicosActivity extends Activity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Intent i = new Intent(this, ConfiguracionActivity.class);
+            startActivity(i);
             return true;
         }
 
