@@ -22,6 +22,9 @@
         <item> Ayuda </item>
     </string-array>
 
+    <string name="hobbys_medico">    · Jugar al tenis \n   · Conferencias sobre investigacion \n   · Futbol, es del Real Madrid</string>
+    <string name="datos_medico">    · Casado con dos hijos \n   · Suele almorzar entre las 11 y las 12 de la mañana</string>
+
     <array name="nav_drawer_icons">
         <item>@drawable/ic_medico</item>
         <item>@drawable/ic_calendario</item>

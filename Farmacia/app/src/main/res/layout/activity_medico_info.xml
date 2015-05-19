@@ -3,138 +3,160 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
 
     <include layout="@layout/toolbar"/>
-
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/Tabla"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:stretchColumns="1">
-
-    <TableRow
-        android:id="@+id/Fila1"
+    <include layout="@layout/listview_medicos_item"
+        android:id="@+id/medico"/>
+    <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
-
-        <TextView
-            android:id="@+id/MedicoNombre"
-            android:layout_width="wrap_content"
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nombre:"
-            android:textSize="15sp"
-            android:gravity="left"/>
-    </TableRow>
-    <TableRow
-        android:id="@+id/Fila2"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+            android:padding="10dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/MedicoEspecialidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Especialidad:"
+                android:textSize="17sp"
+                android:textColor="#FF000000"
+                android:textStyle="bold"/>
 
-        <TextView
-            android:id="@+id/MedicoNColegiado"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nº colegiado:"
-            android:gravity="left"/>
-    </TableRow>
-    <TableRow
-        android:id="@+id/Fila3"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/MedicoEspecialidad"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Especialidad:"
-            android:gravity="left"/>
-    </TableRow>
-    <TableRow
-        android:id="@+id/Fila4"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tMedicoEspecialidad"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="  · Urología"
+                android:padding="1sp"
+                android:textSize="17sp"/>
 
-        <TextView
-            android:id="@+id/MedicoTelefono"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tlf:"
-            android:gravity="left"/>
-    </TableRow>
-    <TableRow
-        android:id="@+id/Fila5"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/MedicoTelefono"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tlf:"
+                android:textColor="#FF000000"
+                android:textSize="17sp"
+                android:textStyle="bold"/>
 
-        <TextView
-            android:id="@+id/MedicoEmail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Email:"
-            android:gravity="left"/>
-    </TableRow>
-    <TableRow
-        android:id="@+id/Fila6"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tMedicoTelefono"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  · 600692469"
+                android:padding="1sp"
+                android:textSize="17sp"/>
 
-        <TextView
-            android:id="@+id/MedicoTipo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tipo:"
-            android:gravity="left"/>
-    </TableRow>
-    <TableRow
-        android:id="@+id/Fila7"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/MedicoEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email:"
+                android:textColor="#FF000000"
+                android:textSize="17sp"
+                android:textStyle="bold"/>
 
-        <TextView
-            android:id="@+id/MedicoHobbys"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hobbys:"
-            android:gravity="left"/>
-    </TableRow>
-    <TableRow
-        android:id="@+id/Fila8"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tMedicoEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  · myemail@domain.es"
+                android:padding="1sp"
+                android:textSize="17sp"/>
 
-        <TextView
-            android:id="@+id/MedicoEmpresa"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Centro/s:"
-            android:gravity="left"/>
-    </TableRow>
-    <TableRow
-        android:id="@+id/Fila9"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/MedicoSector"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sector:"
-            android:gravity="left"/>
-    </TableRow>
-    <TableRow
-        android:id="@+id/Fila10"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/MedicoTipo"
+                android:textSize="17sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tipo cliente:"
+                android:textColor="#FF000000"
+                android:textStyle="bold"/>
 
-        <TextView
-            android:id="@+id/MedicoDatosInteres"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Datos de interés:"
-            android:gravity="left"/>
-    </TableRow>
+            <TextView
+                android:id="@+id/tMedicoTipo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  · B"
+                android:padding="1sp"
+                android:textSize="17sp"/>
 
-</TableLayout>
+            <TextView
+                android:id="@+id/MedicoEmpresa"
+                android:textSize="17sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Centro/s:"
+                android:textColor="#FF000000"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tMedicoEmpresa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  · Hospital general de Alicante"
+                android:padding="1sp"
+                android:textSize="17sp"/>
+
+            <TextView
+                android:id="@+id/MedicoSector"
+                android:textSize="17sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FF000000"
+                android:text="Sector:"
+                android:textStyle="bold"/>
+
+
+            <TextView
+                android:id="@+id/tMedicoSector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  · Publico"
+                android:padding="1sp"
+                android:textSize="17sp"/>
+
+            <TextView
+                android:id="@+id/MedicoHobbys"
+                android:textSize="17sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FF000000"
+                android:text="Hobby´s:"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tMedicoHobbys"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="false"
+                android:text="@string/hobbys_medico"
+                android:textSize="17sp"/>
+
+            <TextView
+                android:id="@+id/MedicoDatosInteres"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FF000000"
+                android:textSize="17sp"
+                android:text="Datos de interés:"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tMedicoDatosInteres"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="false"
+                android:padding="1sp"
+                android:text="@string/datos_medico"
+                android:textSize="17sp"/>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

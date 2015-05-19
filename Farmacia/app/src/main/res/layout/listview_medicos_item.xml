@@ -1,10 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:textSize="20sp"
-    android:textColor="#ff000000"
-    android:gravity="left"
-    android:padding="10dip"
-    />
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <com.project2.taes.farmacia.utils.CircleImageView
+        android:id="@+id/foto_medico"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/harold"/>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="#ff000000"
+            android:paddingTop="@dimen/abc_control_padding_material"
+            android:id="@+id/nombre_medico"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:singleLine="true"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/n_colegiado"
+            android:textSize="12sp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="6dp"
+            android:paddingBottom="5dp"/>
+    </LinearLayout>
+</LinearLayout>

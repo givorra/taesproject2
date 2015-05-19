@@ -8,6 +8,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
+
+import com.project2.taes.farmacia.utils.CircleImageView;
 
 
 public class MedicoInfoActivity extends ActionBarActivity {
@@ -29,6 +32,21 @@ public class MedicoInfoActivity extends ActionBarActivity {
                 onBackPressed();
             }
         });
+
+        // Obteniendo medico seleccionado
+        Intent i = getIntent();
+        Medico medico = (Medico)i.getSerializableExtra("sampleObject");
+
+        CircleImageView image = (CircleImageView)findViewById(R.id.foto_medico);
+        int imageResource = getResources().getIdentifier(medico.getFoto(), null, getPackageName());
+        image.setImageDrawable(getResources().getDrawable(imageResource));
+
+        TextView nombre = (TextView) findViewById(R.id.nombre_medico);
+        nombre.setText(medico.getNombre());
+
+        TextView tipo = (TextView) findViewById(R.id.n_colegiado);
+        tipo.setText(medico.getN_colegiado());
+   
     }
 
 

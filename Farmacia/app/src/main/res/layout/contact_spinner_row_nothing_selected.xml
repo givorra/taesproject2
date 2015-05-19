@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:ellipsize="marquee"
-    android:textSize="20sp"
+    android:textSize="22sp"
     android:textColor="#ff000000"
     android:text="[Seleccione zona]"
+    android:layout_marginLeft="16dp"
     />

@@ -14,6 +14,8 @@ import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.AdapterView.OnItemSelectedListener;
 
+import java.util.ArrayList;
+
 
 public class ZonasMedicosActivity extends ActionBarActivity {
 
@@ -69,35 +71,56 @@ public class ZonasMedicosActivity extends ActionBarActivity {
     private void cargarMedicosZona(String zona)
     {
         lvMedicos = (ListView) findViewById(R.id.medicos);
-        ArrayAdapter adapter;
-
+        ItemMedicoAdapter adapter;
+        String medicos[];
+        ArrayList<Medico> itemsMedicos = new ArrayList<>();
+        //String arr[] = getResources().getStringArray(R.array.medicosA);
+        //if (arr[0].equals(arr[1]))
+        //return;
         switch (zona)
         {
             // Parametros: contexto donde se esta utilizando la ista, datos, recurso que define el aspecto visual de la lista
             case "Alicante":
-                adapter = ArrayAdapter.createFromResource(this, R.array.medicosA, R.layout.listview_medicos_item);
+                medicos = getResources().getStringArray(R.array.medicosA);
                 break;
             case "San Juan":
-                adapter = ArrayAdapter.createFromResource(this, R.array.medicosB, R.layout.listview_medicos_item);
+                medicos = getResources().getStringArray(R.array.medicosB);
                 break;
             case "Campello":
-                adapter = ArrayAdapter.createFromResource(this, R.array.medicosC, R.layout.listview_medicos_item);
+                medicos = getResources().getStringArray(R.array.medicosC);
                 break;
             case "Villa Joyosa":
-                adapter = ArrayAdapter.createFromResource(this, R.array.medicosD, R.layout.listview_medicos_item);
+                medicos = getResources().getStringArray(R.array.medicosD);
                 break;
             case "San Vicente":
-                adapter = ArrayAdapter.createFromResource(this, R.array.medicosE, R.layout.listview_medicos_item);
+                medicos = getResources().getStringArray(R.array.medicosE);
                 break;
             default:
-                adapter = null;
+                medicos = null;
         }
 
+        Medico med;
+        String image;
+        String n_colegiado="Nº colegiado: 00000";
+        int nAux=0;
+
+        for (int i = 0; i < 11; i++)
+        {
+            nAux+=1;
+            image = "drawable/medico"+i;
+            med = new Medico(i+1, medicos[i], n_colegiado+nAux, image);
+            itemsMedicos.add(med);
+        }
+
+        adapter = new ItemMedicoAdapter(this, itemsMedicos);
         lvMedicos.setAdapter(adapter);
         lvMedicos.setOnItemClickListener
                 (new AdapterView.OnItemClickListener() {
                     public void onItemClick(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                        //int posicion = parentView.getSelectedItemPosition();
+                        Medico medico = (Medico)parentView.getAdapter().getItem(position);//lvMedicos.getSelectedItem();
                         Intent act = new Intent(getBaseContext(), MedicoInfoActivity.class);
+                        act.putExtra("sampleObject", medico);
                         startActivity(act);
                     }
                 });
