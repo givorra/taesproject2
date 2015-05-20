@@ -64,13 +64,7 @@ public class ReporteActivity extends ActionBarActivity {
         txtObservaciones = (TextView) findViewById(R.id.txtObservaciones);
         txtObservaciones.setText(reporte.Observaciones);
         txtProductos = (TextView) findViewById(R.id.txtProductos);
-        String cad_productos="";
-        for(int i=0;i<reporte.productos.size();i++)
-        {
-            cad_productos += reporte.productos.get(i).getTitulo() + " (" + reporte.productos.get(i).getCantidad() + " unidades)";
-            cad_productos += "\n";
-        }
-        txtProductos.setText(cad_productos);
+        txtProductos.setText(reporte.productos);
     }
 
     @Override

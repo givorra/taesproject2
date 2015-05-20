@@ -3,7 +3,6 @@ import android.content.Context;
 
 import com.project2.taes.farmacia.classes.Producto;
 
-import java.io.*;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -19,7 +18,17 @@ public class Reporte implements java.io.Serializable {
     public boolean acompanyante;
     public Date fecha;
     public String Observaciones;
-    public ArrayList<Producto> productos;
+    public String productos;
+    public Reporte(String areaVisita, String nombreMedico, String lugar, boolean acompanyante, String observaciones, Date fecha, String productos) {
+        this.areaVisita = areaVisita;
+        this.nombreMedico = nombreMedico;
+        this.lugar = lugar;
+        this.acompanyante = acompanyante;
+        this.Observaciones = observaciones;
+        this.fecha = fecha;
+        this.productos = productos;
+    }
+
     public Reporte(String areaVisita, String nombreMedico, String lugar, boolean acompanyante, String observaciones, Date fecha) {
         this.areaVisita = areaVisita;
         this.nombreMedico = nombreMedico;
@@ -27,7 +36,7 @@ public class Reporte implements java.io.Serializable {
         this.acompanyante = acompanyante;
         this.Observaciones = observaciones;
         this.fecha = fecha;
-        this.productos = Producto.getItems();
+        this.productos = "No hay productos asignados a este reporte.";
     }
 
     public void guardar(Context context) {
