@@ -70,12 +70,13 @@ public class MedicoInfoActivity extends ActionBarActivity {
     public void reportesAntiguos() {
         ArrayList<Reporte> reportes = new ArrayList<>();
         Reporte r = new Reporte("Area de San Juan", medico.getNombre(), "una cafeteria", false, "me toco pagar a mi", new Date(2011, 4, 7), "Paracetamol x3");
-        Reporte r2 = new Reporte("un area cualquiera", "Manolo", "mi casa", true, "tuve que esperar una hora", new Date(2007, 2, 2), "Aspirina x2");
+        Reporte r2 = new Reporte("Area de San Juan", medico.getNombre(), "mi casa", true, "tuve que esperar una hora", new Date(2007, 2, 2), "Aspirina x2");
         reportes.add(r);
         reportes.add(r2);
 
         AdapterReporte adapter = new AdapterReporte(this);
         adapter.setReportes(reportes);
+        adapter.setImagenMedico(medico.getFoto());
 
         reportesFragment = new ReporteFragment();
         reportesFragment.setAdapter(adapter);

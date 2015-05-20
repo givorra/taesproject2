@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.project2.taes.farmacia.R;
 import com.project2.taes.farmacia.Reporte;
 import com.project2.taes.farmacia.ReportesSerializables;
+import com.project2.taes.farmacia.utils.CircleImageView;
 
 /**
  * Created by DanielAlejandro on 07/05/2015.
@@ -24,11 +25,15 @@ public class AdapterReporte extends RecyclerView.Adapter<AdapterReporte.ViewHold
     private ReportesSerializables reportes;
     private OnItemClickListener mItemClickListener;
     private Context context;
+    private String urlImagenMedico;
+
     public AdapterReporte(Context context) {
         this.context = context;
         leerListaReportes();
 
     }
+
+    public void setImagenMedico(String imagen){urlImagenMedico = imagen;}
 
     public void leerListaReportes() {
         reportes = new ReportesSerializables();
@@ -49,6 +54,14 @@ public class AdapterReporte extends RecyclerView.Adapter<AdapterReporte.ViewHold
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
+
+        if (urlImagenMedico == null) {
+            urlImagenMedico = "drawable/medico" + position;
+        }
+
+        // Meter imagen por parametro y sino la coge de drawable/
+        int imageResource = context.getResources().getIdentifier(urlImagenMedico, null, context.getPackageName());
+        holder.image.setImageDrawable(context.getResources().getDrawable(imageResource));
 
         holder.nombreMedico.setText(reportes.getReportes().get(position).nombreMedico);
         holder.areaVisita.setText(reportes.getReportes().get(position).areaVisita);
@@ -71,6 +84,7 @@ public class AdapterReporte extends RecyclerView.Adapter<AdapterReporte.ViewHold
         public TextView nombreMedico;
         public TextView areaVisita;
         public TextView fecha;
+        public CircleImageView image;
         public ViewHolder(View itemView) {
             super(itemView);
 
@@ -78,6 +92,8 @@ public class AdapterReporte extends RecyclerView.Adapter<AdapterReporte.ViewHold
            areaVisita= (TextView) itemView.findViewById(R.id.txtAreaVisita);
            fecha = (TextView) itemView.findViewById(R.id.txtFecha);
             itemView.setOnClickListener(this);
+
+            image = (CircleImageView) itemView.findViewById(R.id.circleImage);
         }
 
         @Override
