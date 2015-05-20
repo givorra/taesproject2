@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 
 public class ReporteActivity extends ActionBarActivity {
@@ -13,6 +14,15 @@ public class ReporteActivity extends ActionBarActivity {
     private int id_reporte;
     private ReportesSerializables reportes;
     private Reporte reporte;
+    private TextView txtMedico;
+    private TextView txtArea;
+    private TextView txtLugar;
+    private TextView txtAcompanyante;
+    private TextView txtObservaciones;
+    private TextView txtProductos;
+    private TextView txtFecha;
+
+
     private android.support.v7.widget.Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +47,24 @@ public class ReporteActivity extends ActionBarActivity {
             }
         });
 
+        txtMedico = (TextView) findViewById(R.id.txtNombreMedico);
+        txtMedico.setText(reporte.nombreMedico);
+        /*txtArea = (TextView) findViewById(R.id.txtAreaVisita);
+        txtArea.setText(reporte.areaVisita);*/
+        txtLugar = (TextView) findViewById(R.id.txtLugar);
+        txtLugar.setText(reporte.lugar);
+        txtFecha = (TextView) findViewById(R.id.txtFecha);
+        txtFecha.setText(reporte.fecha.toString());
+        txtAcompanyante = (TextView) findViewById(R.id.txtAcompanyante);
+        if(reporte.acompanyante)
+        {
+            txtAcompanyante.setText("Si");
+        }
+        else txtAcompanyante.setText("No");
+        txtObservaciones = (TextView) findViewById(R.id.txtObservaciones);
+        txtObservaciones.setText(reporte.Observaciones);
+        txtProductos = (TextView) findViewById(R.id.txtProductos);
+        txtProductos.setText(reporte.productos);
     }
 
     @Override

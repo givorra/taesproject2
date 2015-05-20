@@ -1,6 +1,9 @@
 package com.project2.taes.farmacia;
 import android.content.Context;
 
+import com.project2.taes.farmacia.classes.Producto;
+
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -21,9 +24,19 @@ public class Reporte implements java.io.Serializable {
         this.nombreMedico = nombreMedico;
         this.lugar = lugar;
         this.acompanyante = acompanyante;
-        Observaciones = observaciones;
+        this.Observaciones = observaciones;
         this.fecha = fecha;
         this.productos = productos;
+    }
+
+    public Reporte(String areaVisita, String nombreMedico, String lugar, boolean acompanyante, String observaciones, Date fecha) {
+        this.areaVisita = areaVisita;
+        this.nombreMedico = nombreMedico;
+        this.lugar = lugar;
+        this.acompanyante = acompanyante;
+        this.Observaciones = observaciones;
+        this.fecha = fecha;
+        this.productos = "No hay productos asignados a este reporte.";
     }
 
     public void guardar(Context context) {

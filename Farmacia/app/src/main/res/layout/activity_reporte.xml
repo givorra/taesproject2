@@ -7,58 +7,117 @@
     tools:context="com.project2.taes.farmacia.ReporteActivity">
 
     <include layout="@layout/toolbar"/>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="449dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre del médico:"
+                android:id="@+id/labelNombreMedico"
+                android:layout_weight="0.01"
+                android:layout_marginTop="25dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
 
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Nombre medico: "
-        android:id="@+id/txtNombreMedico"
-        android:layout_weight="0.01"
-        android:layout_marginTop="25dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="(nombre medico)"
+                android:id="@+id/txtNombreMedico"
+                android:layout_weight="0.01" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Área visita: "
+                android:id="@+id/labelAreaVisita"
+                android:layout_weight="0.01"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="(area visita)"
+                android:id="@+id/textAreaVisita"
+                android:layout_weight="0.01" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Area visita: "
-        android:id="@+id/txtAreaVisita"
-        android:layout_weight="0.01" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lugar: "
+                android:id="@+id/labelLugar"
+                android:layout_weight="0.01"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Lugar: "
-        android:id="@+id/txtLugar"
-        android:layout_weight="0.01" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="(lugar)"
+                android:id="@+id/txtLugar"
+                android:layout_weight="0.01" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Acompañante: "
-        android:id="@+id/txtAcompanayante"
-        android:layout_weight="0.01" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="¿Acompañante?: "
+                android:id="@+id/labelAcompanayante"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_weight="0.01" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Fecha: "
-        android:id="@+id/txtFecha"
-        android:layout_weight="0.01" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="(acompañante)"
+                android:id="@+id/txtAcompanyante" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Productos: "
-        android:id="@+id/txtProductos"
-        android:layout_weight="0.01" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fecha: "
+                android:id="@+id/labelFecha"
+                android:layout_weight="0.01"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Observaciones: "
-        android:id="@+id/txtObservaciones"
-        android:layout_weight="0.01" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="(fecha)"
+                android:id="@+id/txtFecha"
+                android:layout_weight="0.01" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Productos: "
+                android:id="@+id/labelProductos"
+                android:layout_weight="0.01"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(lista productos)"
+                android:id="@+id/txtProductos"
+                android:layout_weight="0.01" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Observaciones: "
+                android:id="@+id/labelObservaciones"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_weight="0.01" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="76dp"
+                android:text="(observaciones)"
+                android:id="@+id/txtObservaciones" />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

@@ -25,7 +25,9 @@ public class AdapterReporte extends RecyclerView.Adapter<AdapterReporte.ViewHold
     private OnItemClickListener mItemClickListener;
     private Context context;
     public AdapterReporte(Context context) {
+        this.context = context;
         leerListaReportes();
+
     }
 
     public void leerListaReportes() {
