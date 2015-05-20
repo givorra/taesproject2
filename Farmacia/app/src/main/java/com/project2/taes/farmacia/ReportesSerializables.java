@@ -29,6 +29,10 @@ public class ReportesSerializables implements java.io.Serializable {
         reportes.add(reporte);
     }
 
+    /*++++++++++ CODIGO GACEL +++++++++*/
+    public void setReportes(ArrayList<Reporte> reportes){this.reportes = reportes;}
+    /*++++++++++ CODIGO GACEL +++++++++*/
+
     public boolean guardar(Context context) {
 
         try {

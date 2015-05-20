@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.project2.taes.farmacia.R;
+import com.project2.taes.farmacia.Reporte;
 import com.project2.taes.farmacia.ReportesSerializables;
 
 /**
@@ -32,6 +33,9 @@ public class AdapterReporte extends RecyclerView.Adapter<AdapterReporte.ViewHold
         reportes.guardarPlantilla(context);
     }
 
+    /*++++++++++ CODIGO GACEL +++++++++*/
+    public void setReportes(ArrayList<Reporte> reportes){this.reportes.setReportes(reportes);}
+    /*++++++++++ CODIGO GACEL +++++++++*/
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.item_reporte,parent,false);

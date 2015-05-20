@@ -47,6 +47,10 @@ public class ReporteFragment extends Fragment {
         // Required empty public constructor
     }
 
+    /*++++++++++CODIGO GACEL +++++++++++++*/
+    public void setAdapter(AdapterReporte adapter){this.adapter = adapter;}
+    /*++++++++++CODIGO GACEL +++++++++++++*/
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -54,7 +58,13 @@ public class ReporteFragment extends Fragment {
         listaReportes= (RecyclerView) v.findViewById(R.id.listaReportes);
         manager=new LinearLayoutManager(getActivity());
         listaReportes.setLayoutManager(manager);
-        adapter=new AdapterReporte(getActivity());
+
+    /*++++++++++CODIGO GACEL +++++++++++++*/
+        if (adapter == null)
+            adapter=new AdapterReporte(getActivity());
+
+    /*++++++++++CODIGO GACEL +++++++++++++*/
+
         listaReportes.setAdapter(adapter);
         adapter.SetOnItemClickListener(new AdapterReporte.OnItemClickListener() {
 

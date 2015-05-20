@@ -14,6 +14,7 @@
         android:layout_height="wrap_content">
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/medico_info_linearlayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
@@ -149,6 +150,7 @@
                 android:text="Datos de interés:"
                 android:textStyle="bold"/>
 
+
             <TextView
                 android:id="@+id/tMedicoDatosInteres"
                 android:layout_width="wrap_content"
@@ -157,6 +159,14 @@
                 android:padding="1sp"
                 android:text="@string/datos_medico"
                 android:textSize="17sp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ver reportes anteriores"
+                android:textAlignment="center"
+                android:id="@+id/button"
+                android:layout_gravity="center_horizontal" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
