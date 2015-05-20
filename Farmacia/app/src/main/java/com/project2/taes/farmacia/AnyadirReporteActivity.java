@@ -41,26 +41,26 @@ public class AnyadirReporteActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_anyadir_reporte);
 
-        nomMedico=(TextView) findViewById(R.id.lbMedico);
-        tnomMedico=(EditText) findViewById(R.id.txMedico);
+        TextView nomMedico=(TextView) findViewById(R.id.lbMedico);
+        EditText tnomMedico=(EditText) findViewById(R.id.txMedico);
 
-        area= (TextView) findViewById(R.id.lbArea);
-        tarea= (EditText)findViewById(R.id.txArea);
+        TextView area= (TextView) findViewById(R.id.lbArea);
+        EditText tarea= (EditText)findViewById(R.id.txArea);
 
-        lugar=(TextView) findViewById(R.id.lbArea);
-        tlugar=(EditText) findViewById(R.id.txArea);
+        TextView lugar=(TextView) findViewById(R.id.lbArea);
+        EditText tlugar=(EditText) findViewById(R.id.txArea);
 
-        acompanyante=(TextView) findViewById(R.id.lbAcompanyante);
-        tacompanyante=(EditText) findViewById(R.id.txtAcompanayante);
+        TextView acompanyante=(TextView) findViewById(R.id.lbAcompanyante);
+        EditText tacompanyante=(EditText) findViewById(R.id.txtAcompanayante);
 
-        fecha=(TextView) findViewById(R.id.lbFecha);
-        tfecha=(EditText) findViewById(R.id.txFecha);
+        TextView fecha=(TextView) findViewById(R.id.lbFecha);
+        EditText tfecha=(EditText) findViewById(R.id.txFecha);
 
-        observaciones=(TextView) findViewById(R.id.lbObservaciones);
-        tobservaciones=(EditText) findViewById(R.id.txObservaciones);
+        TextView observaciones=(TextView) findViewById(R.id.lbObservaciones);
+        EditText tobservaciones=(EditText) findViewById(R.id.txObservaciones);
 
-        botGuardar=(Button)findViewById(R.id.btGuardar);
-        botCancelar=(Button)findViewById(R.id.btCancelar);
+        Button botGuardar=(Button)findViewById(R.id.btGuardar);
+        Button botCancelar=(Button)findViewById(R.id.btCancelar);
 
     }
 
@@ -69,7 +69,7 @@ public class AnyadirReporteActivity extends ActionBarActivity {
         String are=tarea.getText().toString();
         String lug=tlugar.getText().toString();
         Boolean acom=tacompanyante.getText().toString();
-        Date fec=tfecha.getDate().toString();
+        Date fec=tfecha.get();
         String obs=tobservaciones.getText().toString();
 
 
