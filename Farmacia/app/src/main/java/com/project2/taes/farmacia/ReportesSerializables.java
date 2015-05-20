@@ -61,8 +61,10 @@ public class ReportesSerializables implements java.io.Serializable {
         try {
             Reporte r = new Reporte("area de mi casa", "Pepe", "una cafeteria", false, "me toco pagar a mi", new Date(2011, 4, 7));
             Reporte r2 = new Reporte("un area cualquiera", "Manolo", "mi casa", true, "tuve que esperar una hora", new Date(2007, 2,2));
+            Reporte r3 = new Reporte("area del vecino", "Juan", "en la calle", true, "me pago el taxi", new Date(2008,8,8));
             reportes.add(r);
             reportes.add(r2);
+            reportes.add(r3);
             FileOutputStream fos = context.openFileOutput(fileName, Context.MODE_PRIVATE);
             ObjectOutputStream os = new ObjectOutputStream(fos);
             os.writeObject(reportes);

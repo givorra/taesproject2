@@ -25,7 +25,7 @@ public class Reporte implements java.io.Serializable {
         this.nombreMedico = nombreMedico;
         this.lugar = lugar;
         this.acompanyante = acompanyante;
-        Observaciones = observaciones;
+        this.Observaciones = observaciones;
         this.fecha = fecha;
         this.productos = Producto.getItems();
     }
