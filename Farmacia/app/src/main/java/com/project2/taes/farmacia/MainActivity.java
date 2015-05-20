@@ -155,6 +155,14 @@ public class MainActivity extends ActionBarActivity {
         //reportes.borrarTodo(getApplicationContext());
 
 
+
+
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();  // Always call the superclass method first
+        reportesFragment.refrescar();
     }
 
     private class SlideMenuClickListener implements

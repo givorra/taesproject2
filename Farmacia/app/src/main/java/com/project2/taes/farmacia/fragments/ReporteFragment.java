@@ -84,6 +84,12 @@ public class ReporteFragment extends Fragment {
         return v;
     }
 
+    public void refrescar()
+    {
+        adapter.leerListaReportes();
+        adapter.notifyDataSetChanged();
+    }
+
 
 
 

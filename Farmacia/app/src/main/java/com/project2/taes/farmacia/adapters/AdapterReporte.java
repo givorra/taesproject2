@@ -38,7 +38,8 @@ public class AdapterReporte extends RecyclerView.Adapter<AdapterReporte.ViewHold
 
     public void leerListaReportes() {
         reportes = new ReportesSerializables();
-        reportes.guardarPlantilla(context);
+        if(!reportes.leer(context))
+            reportes.guardarPlantilla(context);
     }
 
     /*++++++++++ CODIGO GACEL +++++++++*/

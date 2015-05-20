@@ -31,8 +31,6 @@ public class ReporteActivity extends ActionBarActivity {
         id_reporte = Integer.parseInt(getIntent().getStringExtra("idPosicion"));
         //Log.d("myTag", Integer.toString(id_reporte) + "*****************************************************************");
         reportes = new ReportesSerializables();
-        reportes.guardarPlantilla(this);
-        reporte = reportes.getReportes().get(id_reporte);
 
         toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -46,25 +44,8 @@ public class ReporteActivity extends ActionBarActivity {
                 onBackPressed();
             }
         });
+        updateComponents();
 
-        txtMedico = (TextView) findViewById(R.id.txtNombreMedico);
-        txtMedico.setText(reporte.nombreMedico);
-        /*txtArea = (TextView) findViewById(R.id.txtAreaVisita);
-        txtArea.setText(reporte.areaVisita);*/
-        txtLugar = (TextView) findViewById(R.id.txtLugar);
-        txtLugar.setText(reporte.lugar);
-        txtFecha = (TextView) findViewById(R.id.txtFecha);
-        txtFecha.setText(reporte.fecha.toString());
-        txtAcompanyante = (TextView) findViewById(R.id.txtAcompanyante);
-        if(reporte.acompanyante)
-        {
-            txtAcompanyante.setText("Si");
-        }
-        else txtAcompanyante.setText("No");
-        txtObservaciones = (TextView) findViewById(R.id.txtObservaciones);
-        txtObservaciones.setText(reporte.Observaciones);
-        txtProductos = (TextView) findViewById(R.id.txtProductos);
-        txtProductos.setText(reporte.productos);
     }
 
     @Override
@@ -87,5 +68,38 @@ public class ReporteActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void updateComponents()
+    {
+        if(!reportes.leer(getApplicationContext()))
+            reportes.guardarPlantilla(getApplicationContext());
+
+        reporte = reportes.getReportes().get(id_reporte);
+        txtMedico = (TextView) findViewById(R.id.txtNombreMedico);
+        txtMedico.setText(reporte.nombreMedico);
+        txtArea = (TextView) findViewById(R.id.txtAreaVisita);
+        txtArea.setText(reporte.areaVisita);
+        txtLugar = (TextView) findViewById(R.id.txtLugar);
+        txtLugar.setText(reporte.lugar);
+        txtFecha = (TextView) findViewById(R.id.txtFecha);
+        txtFecha.setText(reporte.fecha.toString());
+        txtAcompanyante = (TextView) findViewById(R.id.txtAcompanyante);
+        if(reporte.acompanyante)
+        {
+            txtAcompanyante.setText("Si");
+        }
+        else txtAcompanyante.setText("No");
+        txtObservaciones = (TextView) findViewById(R.id.txtObservaciones);
+        txtObservaciones.setText(reporte.Observaciones);
+        txtProductos = (TextView) findViewById(R.id.txtProductos);
+        txtProductos.setText(reporte.productos);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();  // Always call the superclass method first
+        updateComponents();
+
     }
 }
