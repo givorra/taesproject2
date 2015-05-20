@@ -166,4 +166,8 @@ public class AnyadirReporteActivity extends ActionBarActivity implements View.On
             datePickerDialog.show();
         }
     }
+
+    public void salir(View view) {
+        onBackPressed();
+    }
 }

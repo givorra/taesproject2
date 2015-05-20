@@ -15,12 +15,14 @@
     <string name="cancelar">Cancelar</string>
     <string name="title_activity_medico_info">Médicos</string>
     <string name="title_activity_zonas_medicos">Médicos</string>
-    <string-array name = "nav_drawer_items">
+
+    <string-array name="nav_drawer_items">
         <item> Medicos</item>
         <item> Calendario</item>
         <item> Nuevas Rutas </item>
         <item> Ayuda </item>
         <item> Configuración </item>
+        <item> Reportes Gastos </item>
     </string-array>
 
     <string name="hobbys_medico">    · Jugar al tenis \n   · Conferencias sobre investigacion \n   · Futbol, es del Real Madrid</string>
@@ -32,9 +34,12 @@
         <item>@drawable/ic_ruta</item>
         <item>@drawable/ic_help</item>
         <item>@drawable/ic_conf</item>
+        <item>@drawable/ic_conf</item>
     </array>
+
     <string name="title_activity_reporte">Reportes</string>
     <string name="title_activity_anyadir__reporte">Nuevo Reporte</string>
     <string name="lista_vacia">No hay productos promocionados, inserte algún producto.</string>
+    <string name="title_activity_reportes_gastos">Reportes Gastos</string>
 
 </resources>

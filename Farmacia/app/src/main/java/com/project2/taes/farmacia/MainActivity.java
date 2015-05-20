@@ -84,6 +84,8 @@ public class MainActivity extends ActionBarActivity {
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[3], navMenuIcons.getResourceId(3, -1)));
         // Configuracion
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[4], navMenuIcons.getResourceId(4, -1)));
+        //Reportes Gastos
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[5], navMenuIcons.getResourceId(5, -1)));
         // Recycle the typed array
         navMenuIcons.recycle();
         // setting the nav drawer list adapter
@@ -232,9 +234,10 @@ public class MainActivity extends ActionBarActivity {
     }
 
     private void displayView(int position) {
+        Intent i;
         switch (position) {
             case 0:
-                Intent i = new Intent(this, ZonasMedicosActivity.class);
+                i = new Intent(this, ZonasMedicosActivity.class);
                 startActivity(i);
                 break;
             case 1:
@@ -262,8 +265,12 @@ public class MainActivity extends ActionBarActivity {
                         .show();
                 break;
             case 4:
-                Intent intent = new Intent(this, ConfiguracionActivity.class);
-                startActivity(intent);
+                 i = new Intent(this, ConfiguracionActivity.class);
+                startActivity(i);
+                break;
+            case 5:
+                i = new Intent(this, ReportesGastosActivity.class);
+                startActivity(i);
             default:
                 break;
         }

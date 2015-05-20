@@ -145,7 +145,8 @@
             android:id="@+id/btCancelar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cancelar">
+            android:text="Cancelar"
+            android:onClick="salir">
         </Button>
 
     </LinearLayout>
