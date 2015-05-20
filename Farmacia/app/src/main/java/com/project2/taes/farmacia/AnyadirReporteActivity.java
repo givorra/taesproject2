@@ -40,6 +40,9 @@ public class AnyadirReporteActivity extends ActionBarActivity implements View.On
     TextView observaciones;
     EditText tobservaciones;
 
+    TextView productos;
+    EditText tproductos;
+
     Button botGuardar;
     Button botCancelar;
 
@@ -82,14 +85,20 @@ public class AnyadirReporteActivity extends ActionBarActivity implements View.On
         tfecha = (EditText) findViewById(R.id.txFecha);
         tfecha.setOnClickListener(this);
 
+        productos = (TextView) findViewById(R.id.lbProductos);
+        tproductos = (EditText) findViewById(R.id.txProductos);
+
         observaciones = (TextView) findViewById(R.id.lbObservaciones);
         tobservaciones = (EditText) findViewById(R.id.txObservaciones);
+
+
 
         botGuardar = (Button) findViewById(R.id.btGuardar);
         botCancelar = (Button) findViewById(R.id.btCancelar);
 
         Calendar newCalendar = Calendar.getInstance();
         dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
+
         datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
 
             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
@@ -100,6 +109,10 @@ public class AnyadirReporteActivity extends ActionBarActivity implements View.On
 
         },newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
 
+
+
+
+
     }
 
     public void guardar(View view) {
@@ -107,12 +120,22 @@ public class AnyadirReporteActivity extends ActionBarActivity implements View.On
         String are = tarea.getText().toString();
         String lug = tlugar.getText().toString();
         Boolean acom = tacompanyante.isChecked();
-        //Date fec=tfecha;
+
+        String sfecha=tfecha.getText().toString();
+        Date fec=null;
+        try{
+            fec=dateFormatter.parse(sfecha);
+        }catch (Exception e){
+            System.out.println("Unable to parse date stamp");
+        }
+
+        String prod = tproductos.getText().toString();
         String obs = tobservaciones.getText().toString();
 
 
-        //Reporte reporte=new Reporte(are, med, lug, acom, obs, fec);
-        //reporte.guardar(getApplicationContext());
+
+        Reporte reporte=new Reporte(are, med, lug, acom, obs, fec, prod);
+        reporte.guardar(getApplicationContext());
     }
 
     @Override
