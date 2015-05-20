@@ -9,9 +9,10 @@
     </string-array>
 
     <string-array name = "medicosA">
+        <item> Maria Pozuelo Rubio </item>
         <item> Pepe Ivorra Piñol </item>
         <item> Gacel Ivorra Rodriguez </item>
-        <item> Michelle Padron Morales </item>
+        <item> Lucia Gonzalez Perez </item>
         <item> Ismael piñeiro </item>
         <item> Vicente Gonzalez Marin </item>
         <item> Pepe Ivorra Piñol </item>
@@ -23,6 +24,7 @@
     <string-array name = "medicosB">
         <item> Miren Amiano Desnudo</item>
         <item> Fermín Galarga</item>
+        <item> José Luis Lamata Feliz</item>
         <item> Mª Mar Barco del Río</item>
         <item> Isolina Gato Sardina</item>
         <item> Natividad Belén Santamaría</item>
@@ -30,49 +32,45 @@
         <item> Sandalio Botín Descalzo</item>
         <item> Perfecto Ladrón Honrado</item>
         <item> Susana Braga Palomino</item>
-        <item> José Luis Lamata Feliz</item>
         <item> Antonio Bragueta Suelta</item>
     </string-array>
     <string-array name = "medicosC">
+        <item> Ramona Ponte Alegre</item>
         <item> Amparo Loro Raro</item>
         <item> Agustín Cabeza Compostizo</item>
+        <item> Ana Mier de Cilla</item>
         <item> Miguel Marco Gol</item>
         <item> Román Calavera Calva</item>
-        <item> Ana Mier de Cilla</item>
         <item> Fernando Coco Cuadrado</item>
         <item> Mª Pilar Oreja de Perro</item>
         <item> Alberto Comino Grande</item>
         <item> Dolores Pecho Barba</item>
         <item> María Concepción Culo Bonito</item>
-        <item> Rosa Pechoabierto y del Cacho</item>
     </string-array>
     <string-array name = "medicosD">
+        <item> Ana Púlpito Salido</item>
         <item> Pascual Conejo Enamorado</item>
         <item> Evaristo Piernabierta Zas</item>
+        <item> Eva Fina Segura	Alfonso</item>
         <item> José de la Polla Grande</item>
         <item> Ramona Ponte Alegre</item>
         <item> Presentación de Piernas largas</item>
-        <item> Ana Púlpito Salido</item>
         <item> Rosario del Cura Sacristán</item>
         <item> Carlos Redondo Cuadrado</item>
         <item> Jesús Estan Camino</item>
         <item> Emiliano Salido del Pozo</item>
-        <item> Eva Fina Segura	Alfonso</item>
     </string-array>
     <string-array name = "medicosE">
-        <item> Seisdedos Pies Planos</item>
         <item> Margarita Flores del Campo</item>
         <item> José Sin Mayordomo</item>
+        <item> Seisdedos Pies Planos</item>
+        <item> Margarita Flores del Campo</item>
         <item> Luis Gordo de Día</item>
         <item> Pedro Trabajo Cumplido</item>
         <item> Francisco José Folla Doblado</item>
         <item> Abundio Verdugo de Dios</item>
         <item> Seisdedos Pies Planos</item>
-        <item> Margarita Flores del Campo</item>
         <item> José Sin Mayordomo</item>
         <item> Luis Gordo de Día</item>
-        <item> Pedro Trabajo Cumplido</item>
-        <item> Francisco José Folla Doblado</item>
-        <item> Abundio Verdugo de Dios</item>
     </string-array>
 </resources>

@@ -1,4 +1,4 @@
-package com.project2.taes.farmacia;
+package com.project2.taes.farmacia.adapters;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,6 +10,8 @@ import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.project2.taes.farmacia.Medico;
+import com.project2.taes.farmacia.R;
 import com.project2.taes.farmacia.utils.CircleImageView;
 
 import java.util.ArrayList;
