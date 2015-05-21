@@ -20,6 +20,7 @@
                 android:layout_height="wrap_content"
                 android:text="Nombre del médico:"
                 android:id="@+id/labelNombreMedico"
+                android:textStyle="bold"
                 android:layout_weight="0.01"
                 android:layout_marginTop="10dp"
                 android:textAppearance="?android:attr/textAppearanceMedium"/>
@@ -29,6 +30,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="(nombre medico)"
+                android:paddingLeft="10dp"
                 android:id="@+id/txtNombreMedico"
                 android:layout_weight="0.01" />
 
@@ -36,6 +38,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Área visita: "
+                android:textStyle="bold"
                 android:id="@+id/labelAreaVisita"
                 android:layout_weight="0.01"
                 android:textAppearance="?android:attr/textAppearanceMedium"/>
@@ -44,6 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="(area visita)"
+                android:paddingLeft="10dp"
                 android:id="@+id/txtAreaVisita"
                 android:layout_weight="0.01" />
 
@@ -51,6 +55,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Lugar: "
+                android:textStyle="bold"
                 android:id="@+id/labelLugar"
                 android:layout_weight="0.01"
                 android:textAppearance="?android:attr/textAppearanceMedium"/>
@@ -59,6 +64,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="(lugar)"
+                android:paddingLeft="10dp"
                 android:id="@+id/txtLugar"
                 android:layout_weight="0.01" />
 
@@ -66,6 +72,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="¿Acompañante?: "
+                android:textStyle="bold"
                 android:id="@+id/labelAcompanayante"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_weight="0.01" />
@@ -74,12 +81,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="(acompañante)"
+                android:paddingLeft="10dp"
                 android:id="@+id/txtAcompanyante" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Fecha: "
+                android:textStyle="bold"
                 android:id="@+id/labelFecha"
                 android:layout_weight="0.01"
                 android:textAppearance="?android:attr/textAppearanceMedium"/>
@@ -88,6 +97,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="(fecha)"
+                android:paddingLeft="10dp"
                 android:id="@+id/txtFecha"
                 android:layout_weight="0.01" />
 
@@ -95,6 +105,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Productos: "
+                android:textStyle="bold"
                 android:id="@+id/labelProductos"
                 android:layout_weight="0.01"
                 android:textAppearance="?android:attr/textAppearanceMedium"/>
@@ -103,6 +114,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="(lista productos)"
+                android:paddingLeft="10dp"
                 android:id="@+id/txtProductos"
                 android:layout_weight="0.01" />
 
@@ -110,6 +122,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Observaciones: "
+                android:textStyle="bold"
                 android:id="@+id/labelObservaciones"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_weight="0.01" />
@@ -118,6 +131,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="76dp"
                 android:text="(observaciones)"
+                android:paddingLeft="10dp"
                 android:id="@+id/txtObservaciones" />
         </LinearLayout>
     </ScrollView>

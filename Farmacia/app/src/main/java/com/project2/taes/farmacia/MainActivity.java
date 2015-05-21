@@ -79,7 +79,7 @@ public class MainActivity extends ActionBarActivity {
         // Calendario
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[1], navMenuIcons.getResourceId(1, -1)));
         // Rutas
-        navDrawerItems.add(new NavDrawerItem(navMenuTitles[2], navMenuIcons.getResourceId(2, -1), true, "22"));
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[2], navMenuIcons.getResourceId(2, -1), true, "11"));
         // Ayuda
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[3], navMenuIcons.getResourceId(3, -1)));
         // Configuracion
@@ -262,7 +262,7 @@ public class MainActivity extends ActionBarActivity {
                 break;
             case 2:
                 new AlertDialog.Builder(this)
-                        .setMessage("Tiene 22 rutas nuevas para importar al calendario.")
+                        .setMessage("Tiene 11 rutas nuevas para importar al calendario.")
                         .setCancelable(false)
                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
@@ -308,22 +308,27 @@ public class MainActivity extends ActionBarActivity {
         long inicioMillis = 0;
         long finalMillis = 0;
         Calendar tiempoInicio = Calendar.getInstance();
-        tiempoInicio.set(2015, 5, 2, 7, 30);
-        inicioMillis = tiempoInicio.getTimeInMillis();
         Calendar tiempoFinal = Calendar.getInstance();
-        tiempoFinal.set(2015, 5, 2, 8, 45);
-        finalMillis = tiempoFinal.getTimeInMillis();
 
         ContentResolver cr = getContentResolver();
-        ContentValues values = new ContentValues();
-        values.put(CalendarContract.Events.DTSTART, inicioMillis);
-        values.put(CalendarContract.Events.DTEND, finalMillis);
-        values.put(CalendarContract.Events.TITLE, "Prueba");
-        values.put(CalendarContract.Events.DESCRIPTION, "Evento de prueba");
-        values.put(CalendarContract.Events.CALENDAR_ID, calID);
-        TimeZone timeZone = TimeZone.getDefault();
-        values.put(CalendarContract.Events.EVENT_TIMEZONE, timeZone.getID());
-        Uri uri = cr.insert(CalendarContract.Events.CONTENT_URI, values);
+
+
+        for(int i=0; i < 11; i++) {
+            tiempoInicio.set(2015, 5, (2 + 2*i), 12, 0);
+            tiempoFinal.set(2015, 5, (2 + 2*i), 14, 0);
+            inicioMillis = tiempoInicio.getTimeInMillis();
+            finalMillis = tiempoFinal.getTimeInMillis();
+
+            ContentValues values = new ContentValues();
+            values.put(CalendarContract.Events.DTSTART, inicioMillis);
+            values.put(CalendarContract.Events.DTEND, finalMillis);
+            values.put(CalendarContract.Events.TITLE, "Visita Doctor Gonzalez");
+            values.put(CalendarContract.Events.DESCRIPTION, "Centro de Alicante");
+            values.put(CalendarContract.Events.CALENDAR_ID, calID);
+            TimeZone timeZone = TimeZone.getDefault();
+            values.put(CalendarContract.Events.EVENT_TIMEZONE, timeZone.getID());
+            Uri uri = cr.insert(CalendarContract.Events.CONTENT_URI, values);
+        }
     }
 
     private void mostrarCalendario(int mes) {
