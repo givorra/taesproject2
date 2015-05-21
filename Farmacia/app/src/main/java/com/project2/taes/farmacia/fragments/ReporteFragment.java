@@ -90,6 +90,10 @@ public class ReporteFragment extends Fragment {
         adapter.notifyDataSetChanged();
     }
 
+    public void borrarTodos() {
+        adapter.borrarTodos();
+        refrescar();
+    }
 
 
 

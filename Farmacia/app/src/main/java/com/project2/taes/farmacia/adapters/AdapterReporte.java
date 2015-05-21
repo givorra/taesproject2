@@ -36,10 +36,14 @@ public class AdapterReporte extends RecyclerView.Adapter<AdapterReporte.ViewHold
 
     public void setImagenMedico(String imagen){urlImagenMedico = imagen;}
 
+    public void borrarTodos() {
+        reportes.borrarTodo(context);
+    }
+
     public void leerListaReportes() {
         reportes = new ReportesSerializables();
-        if(!reportes.leer(context))
-            reportes.guardarPlantilla(context);
+        //if(!reportes.leer(context))
+        reportes.guardarPlantilla(context);
     }
 
     /*++++++++++ CODIGO GACEL +++++++++*/

@@ -131,7 +131,7 @@ public class MainActivity extends ActionBarActivity {
                         .setCancelable(false)
                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
-                                //Borrar reportes pendientes
+                                reportesFragment.borrarTodos();
                             }
                         })
                         .setNegativeButton("Cancelar", null)
