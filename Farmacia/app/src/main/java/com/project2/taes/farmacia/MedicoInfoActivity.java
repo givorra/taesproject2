@@ -74,7 +74,7 @@ public class MedicoInfoActivity extends ActionBarActivity {
         reportes.add(r);
         reportes.add(r2);
 
-        AdapterReporte adapter = new AdapterReporte(this);
+        AdapterReporte adapter = new AdapterReporte(this, true);
         adapter.setReportes(reportes);
         adapter.setImagenMedico(medico.getFoto());
 

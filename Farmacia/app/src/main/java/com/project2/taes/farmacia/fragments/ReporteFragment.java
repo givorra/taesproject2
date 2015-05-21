@@ -61,7 +61,7 @@ public class ReporteFragment extends Fragment {
 
     /*++++++++++CODIGO GACEL +++++++++++++*/
         if (adapter == null)
-            adapter=new AdapterReporte(getActivity());
+            adapter=new AdapterReporte(getActivity(), false);
 
     /*++++++++++CODIGO GACEL +++++++++++++*/
 

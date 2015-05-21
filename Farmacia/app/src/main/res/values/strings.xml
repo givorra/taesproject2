@@ -20,9 +20,9 @@
         <item> Medicos</item>
         <item> Calendario</item>
         <item> Nuevas Rutas </item>
-        <item> Ayuda </item>
-        <item> Configuración </item>
         <item> Reportes Gastos </item>
+        <item> Configuración </item>
+        <item> Ayuda </item>
     </string-array>
 
     <string name="hobbys_medico">    · Jugar al tenis \n   · Conferencias sobre investigacion \n   · Futbol, es del Real Madrid</string>
@@ -32,9 +32,10 @@
         <item>@drawable/ic_medico</item>
         <item>@drawable/ic_calendario</item>
         <item>@drawable/ic_ruta</item>
-        <item>@drawable/ic_help</item>
-        <item>@drawable/ic_conf</item>
         <item>@drawable/ic_reportes_gastos</item>
+        <item>@drawable/ic_conf</item>
+        <item>@drawable/ic_help</item>
+
     </array>
 
     <string name="title_activity_reporte">Reportes</string>

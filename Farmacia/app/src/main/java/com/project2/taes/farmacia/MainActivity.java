@@ -272,13 +272,14 @@ public class MainActivity extends ActionBarActivity {
                         .setNegativeButton("Cancelar", null)
                         .show();
                 break;
+            case 3:
+                i = new Intent(this, ReportesGastosActivity.class);
+                startActivity(i);
+                break;
             case 4:
                  i = new Intent(this, ConfiguracionActivity.class);
                 startActivity(i);
                 break;
-            case 5:
-                i = new Intent(this, ReportesGastosActivity.class);
-                startActivity(i);
             default:
                 break;
         }

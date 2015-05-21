@@ -6,6 +6,7 @@ import java.util.Date;
 import android.content.Context;
 import android.support.v7.internal.widget.AdapterViewCompat;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,9 +28,11 @@ public class AdapterReporte extends RecyclerView.Adapter<AdapterReporte.ViewHold
     private OnItemClickListener mItemClickListener;
     private Context context;
     private String urlImagenMedico;
+    private boolean antiguos;
 
-    public AdapterReporte(Context context) {
+    public AdapterReporte(Context context, boolean antiguos) {
         this.context = context;
+        this.antiguos = antiguos;
         //leerListaReportes();
         reportes = new ReportesSerializables();
         reportes.guardarPlantilla(context);
@@ -62,7 +65,7 @@ public class AdapterReporte extends RecyclerView.Adapter<AdapterReporte.ViewHold
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
 
-        if (urlImagenMedico == null) {
+        if (!antiguos) {
             urlImagenMedico = "drawable/medico" + position;
         }
 
