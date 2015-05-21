@@ -37,6 +37,7 @@
             android:id="@+id/usuario"
             android:padding="10dp"
             android:hint="@string/usuario"
+            android:text="usuario@farmacia"
             android:background="@drawable/edit_text_arriba_conf"
             android:drawableLeft="@drawable/ic_usuario"/>
 
@@ -47,6 +48,7 @@
             android:id="@+id/contrasenya"
             android:padding="10dp"
             android:hint="@string/contrasenya"
+            android:text="123456"
             android:background="@drawable/edit_text_medio_conf"
             android:drawableLeft="@drawable/ic_contrasenya"/>
 
@@ -57,6 +59,7 @@
             android:layout_gravity="center_horizontal"
             android:padding="10dp"
             android:hint="@string/servidor"
+            android:text="ESP2"
             android:background="@drawable/edit_text_abajo_conf"
             android:drawableLeft="@drawable/ic_servidor"/>
 

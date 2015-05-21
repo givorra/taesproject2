@@ -30,7 +30,9 @@ public class AdapterReporte extends RecyclerView.Adapter<AdapterReporte.ViewHold
 
     public AdapterReporte(Context context) {
         this.context = context;
-        leerListaReportes();
+        //leerListaReportes();
+        reportes = new ReportesSerializables();
+        reportes.guardarPlantilla(context);
 
     }
 
@@ -41,9 +43,8 @@ public class AdapterReporte extends RecyclerView.Adapter<AdapterReporte.ViewHold
     }
 
     public void leerListaReportes() {
-        reportes = new ReportesSerializables();
-        //if(!reportes.leer(context))
-        reportes.guardarPlantilla(context);
+        if(!reportes.leer(context))
+            reportes.guardarPlantilla(context);
     }
 
     /*++++++++++ CODIGO GACEL +++++++++*/
