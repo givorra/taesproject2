@@ -56,7 +56,7 @@ public class AdapterReporteGastos extends RecyclerView.Adapter<AdapterReporteGas
     public void onBindViewHolder(final ViewHolder holder, int position) {
 
         holder.titulo.setText(reportes.get(position).titulo);
-        holder.importe.setText(reportes.get(position).importe.toString());
+        holder.importe.setText(reportes.get(position).importe.toString() + " €");
         holder.image.setImageBitmap(reportes.get(position).image);
     }
 

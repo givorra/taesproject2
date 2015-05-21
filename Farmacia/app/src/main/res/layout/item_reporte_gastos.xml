@@ -34,14 +34,16 @@
                 android:text="Titulo"
                 android:textStyle="bold"
                 android:id="@+id/txtReporteGasto"
-                android:layout_weight="0.04" />
+                android:layout_weight="0.04"
+                android:paddingTop="10dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Importe"
                 android:id="@+id/importeReporteGasto"
-                android:layout_weight="0.03" />
+                android:layout_weight="0.03"
+                android:paddingTop="5dp"/>
 
         </LinearLayout>
     </RelativeLayout>

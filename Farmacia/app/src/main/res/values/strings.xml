@@ -34,7 +34,7 @@
         <item>@drawable/ic_ruta</item>
         <item>@drawable/ic_help</item>
         <item>@drawable/ic_conf</item>
-        <item>@drawable/ic_conf</item>
+        <item>@drawable/ic_reportes_gastos</item>
     </array>
 
     <string name="title_activity_reporte">Reportes</string>

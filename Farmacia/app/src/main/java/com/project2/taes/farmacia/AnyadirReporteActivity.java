@@ -1,6 +1,8 @@
 package com.project2.taes.farmacia;
 
+import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
@@ -11,6 +13,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.text.DateFormat;
@@ -136,6 +139,15 @@ public class AnyadirReporteActivity extends ActionBarActivity implements View.On
 
         Reporte reporte=new Reporte(are, med, lug, acom, obs, fec, prod);
         reporte.guardar(getApplicationContext());
+        new AlertDialog.Builder(this)
+                .setMessage("Guardado con éxito.")
+                .setCancelable(false)
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        onBackPressed();
+                    }
+                })
+                .show();
     }
 
     @Override

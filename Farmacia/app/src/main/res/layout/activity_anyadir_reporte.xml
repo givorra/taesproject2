@@ -13,6 +13,7 @@
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="15dp"
     android:orientation="vertical">
     <!--Datos a rellenar del reporte nuevo-->
 
@@ -43,7 +44,6 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" >
 
-        <requestFocus />
     </EditText>
 
     <TextView
@@ -58,7 +58,6 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" >
 
-        <requestFocus />
     </EditText>
 
     <TextView
@@ -73,8 +72,6 @@
         android:layout_height="wrap_content"
         android:text=""
         android:id="@+id/checkBox" />
-
-        <requestFocus />
 
     <TextView
         android:id="@+id/lbFecha"
@@ -103,7 +100,6 @@
         android:ems="10"
         android:layout_gravity="center_horizontal">
 
-        <requestFocus/>
     </EditText>
 
 
@@ -122,7 +118,6 @@
         android:ems="10"
         android:layout_gravity="center_horizontal">
 
-        <requestFocus/>
     </EditText>
 
     <!--Botones de Enviar y Cancelar-->

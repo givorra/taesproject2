@@ -19,6 +19,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -68,6 +69,7 @@ public class ReportesGastosActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 final Dialog dialog = new Dialog(v.getContext());
+                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                 dialog.setContentView(R.layout.custom_dialog);
                 dialog.setTitle("Reporte de gastos nuevo");
 
@@ -93,7 +95,6 @@ public class ReportesGastosActivity extends ActionBarActivity {
                         reporteGastoFragment.add(new ReporteGastos(titulo.getText().toString(),
                                Float.parseFloat(importe.getText().toString()), myBitmap));
                         dialog.dismiss();
-
                     }
                 });
 
